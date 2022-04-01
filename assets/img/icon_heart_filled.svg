@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <clipPath id="clip-icon_heart_filled">
+      <rect width="64" height="64"/>
+    </clipPath>
+  </defs>
+  <g id="icon_heart_filled" clip-path="url(#clip-icon_heart_filled)">
+    <path id="Union_1" data-name="Union 1" d="M10.9,31.113a14,14,0,0,1,19.8-19.8l.009.009q.2-.215.406-.423a14,14,0,0,1,19.8,19.8q-.209.209-.423.406l.009.009-19.8,19.8Z" transform="translate(1.201 3.201)" fill="#d9b448"/>
+  </g>
+</svg>
