@@ -715,7 +715,7 @@ h3.quote::before {
     line-height: 40px;
   }
   .slider {
-    padding: 126px 0 151px 0;
+    /* padding: 126px 0 151px 0; */
   }
   .content-title {
     font-size: 28px;
@@ -774,7 +774,7 @@ h3.quote::before {
     line-height: 50px;
   }
   .slider {
-    padding: 126px 0 151px 0;
+    /* padding: 126px 0 151px 0; */
   }
   .content-title {
     font-size: 28px;

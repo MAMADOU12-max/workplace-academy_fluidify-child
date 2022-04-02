@@ -4,7 +4,6 @@
     display: flex;
 }
 .blockAgenda {
-    margin-bottom: 70px;
     display: block;
 }
 .blockText8 {
@@ -185,6 +184,10 @@
     margin-top: 3px;
 }
 
+.img_card {
+    width: 150px;
+}
+
 @media all and (min-width: 300px) and (max-width: 767px) {
     .blockAgenda {
         display: block;
@@ -249,8 +252,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 text-center mx-auto col-12">
-                <h2>Voor wie maken wij onze kennis-producten?</h2>
-                <div class="default-text" >
+                <strong class="hero-title"> Voor wie maken wij onze kennis-producten?</strong>
+                <div class="default-text pt-3" >
                     <h5>Wij maken onze kennisproducten altijd voor een specifieke doelgroep. Dit kan op dire
                     ctie, management of uitvoerend niveau zijn.</h5>
                     
@@ -263,38 +266,38 @@
 <div class="theme-section pt-1">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-lg-3 p-1">
+            <div class="col-md-6 col-lg-3 p-1" style="height: 230px;">
                <a>
-                    <div class="theme-card__wrapper text-center py-5">
-                        <img class="im-fluid w-50" style=""
+                    <div class="theme-card__wrapper text-center py-4">
+                        <img class="img-fluid" style="max-width: 150px;"
                         src="<?php  echo get_stylesheet_directory_uri() . '/assets/img/Afbeelding-opleiding-workplace-management.001.png' ?>">    
                         <h4 class="theme-card__title mt-2 mb-0">Opleiding</h4>
                     </div>
                 </a> 
             </div>
 
-            <div class="col-md-6 col-lg-3 p-1">
+            <div class="col-md-6 col-lg-3 p-1" style="height: 230px;">
                 <a>
-                    <div class="theme-card__wrapper text-center py-5">
-                        <img class="im-fluid w-50" style=""
+                    <div class="theme-card__wrapper text-center py-4">
+                        <img class="img-fluid" style="max-width: 150px;"
                         src="<?php  echo get_stylesheet_directory_uri() . '/assets/img/Afbeelding-opleiding-workplace-management.001.png' ?>">    
                         <h4 class="theme-card__title mt-2 mb-0">Opleiding</h4>
                     </div>
                 </a> 
             </div>
-            <div class="col-md-6 col-lg-3 p-1">
+            <div class="col-md-6 col-lg-3 p-1" style="height: 230px;">
                 <a>
-                    <div class="theme-card__wrapper text-center py-5">
-                        <img class="im-fluid w-50" style=""
+                    <div class="theme-card__wrapper text-center py-4">
+                        <img class="img-fluid" style="max-width: 150px;"
                         src="<?php  echo get_stylesheet_directory_uri() . '/assets/img/Afbeelding-opleiding-workplace-management.001.png' ?>">    
                         <h4 class="theme-card__title mt-2 mb-0">Opleiding</h4>
                     </div>
                 </a> 
             </div>
-            <div class="col-md-6 col-lg-3 p-1">
+            <div class="col-md-6 col-lg-3 p-1" style="height: 230px;">
                 <a>
-                    <div class="theme-card__wrapper text-center py-5">
-                        <img class="im-fluid w-50" style=""
+                    <div class="theme-card__wrapper text-center py-4">
+                        <img class="img-fluid" style="max-width: 150px;"
                         src="<?php  echo get_stylesheet_directory_uri() . '/assets/img/Afbeelding-opleiding-workplace-management.001.png' ?>">    
                         <h4 class="theme-card__title mt-2 mb-0">Opleiding</h4>
                     </div>
@@ -318,11 +321,9 @@
     <div class="blockFrontAgenda">
         <div class="container px-0">
 
-            <div class="row">
-                <div class="col-12 d-flex justify-content-center my-4">
-                    <h2 class=" mt-3 w-50 text-center">
-                        <strong>Onze agenda met alle  Activiteiten voor jou</strong>  
-                    </h2>
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6 col-11 mb-4">
+                    <div class="hero-title text-center">Onze agenda met alle  Activiteiten voor jou </div>  
                 </div>
             </div>
 
@@ -420,11 +421,14 @@
 <!-- ---------------------------------------------------End agenda --------------------------------------------- -->
 
 
-<div class="theme-section">
+<div class="theme-section pt-0 pb-3">
     <div class="container">
         <div class="row">
             <div class="col-md-6 text-center mx-auto col-12">
-                <h2> Lorem ipsum dolor sit amet consectetur adipisicing. </h2>
+                <!-- <h2> Lorem ipsum dolor sit amet consectetur adipisicing. </h2> -->
+                <div class="hero-title text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing.
+                </div> 
             </div>
         </div>
     </div>
@@ -433,7 +437,34 @@
 <div class="theme-section pt-1">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 p-1 " href="">
+
+            <div class="col-md-6 p-4 card_side" href="">
+                <div class="row d-flex bd-highlight background__lightblue rounded rounded-5 theme-card__wrapper">
+                    <div class="col-md-3">
+                        <img class="m-2 img_card" 
+                        src="<?php  echo get_stylesheet_directory_uri() . '/assets/img/Afbeelding-opleiding-workplace-management.001.png' ?>">
+                    </div>
+                    <div class="col-md-9 col-12 px-md-2 px-0">
+                        <h5 class=""> <strong>Title of the Opleiding</strong></h5> 
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis corporis error nulla molestiae nemo? Dignissimos incidunt nam ex dolore qui?</p>  
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 p-4 card_side" href="">
+                <div class="row d-flex bd-highlight background__lightblue rounded rounded-5 theme-card__wrapper">
+                    <div class="col-md-3">
+                        <img class="img_card m-2" style=""
+                        src="<?php  echo get_stylesheet_directory_uri() . '/assets/img/Afbeelding-opleiding-workplace-management.001.png' ?>">
+                    </div>
+                    <div class="col-md-9 col-12 px-md-2 px-0">
+                        <h5 class=""> <strong>Title of the Opleiding</strong></h5> 
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis corporis error nulla molestiae nemo? Dignissimos incidunt nam ex dolore qui?</p>                 
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="col-md-6 p-1" href="">
                 <div class="d-flex bd-highlight background__lightblue rounded rounded-5 theme-card__wrapper">
                     <div class="px-3 py-2 bd-highlight d-flex align-items-center">
                         <img class="im-fluid m-2" width="200px" style=""
@@ -444,35 +475,12 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis corporis error nulla molestiae nemo? Dignissimos incidunt nam ex dolore qui?</p>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-md-6 p-1" href="">
-                <div class="d-flex bd-highlight background__lightblue rounded rounded-5 theme-card__wrapper">
-                    <div class="px-3 py-2 bd-highlight d-flex align-items-center">
-                        <img class="im-fluid m-2" width="200px" style=""
-                        src="<?php  echo get_stylesheet_directory_uri() . '/assets/img/Afbeelding-opleiding-workplace-management.001.png' ?>">                          
-                    </div>
-                    <div class="p-2 bd-highlight flex-grow-1 ">
-                        <h5 class=""> <strong>Title of the Opleiding</strong></h5> 
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis corporis error nulla molestiae nemo? Dignissimos incidunt nam ex dolore qui?</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- <div class="col-md-6 p-1">
-                <a>
-                    <div class="theme-card__wrapper text-center py-5">
-                        <img class="im-fluid w-50" style=""
-                        src="<?php  echo get_stylesheet_directory_uri() . '/assets/img/Afbeelding-opleiding-workplace-management.001.png' ?>">    
-                        <h4 class="theme-card__title mt-2 mb-0">Opleiding</h4>
-                    </div>
-                </a> 
             </div> -->
 
         </div>
 
         <div class="row">
-            <div class="col-12 d-flex justify-content-center my-4">
+            <div class="col-12 d-flex justify-content-center my-md-4 mb-5">
                 <button type="button" class="btn background__secondary text-white mt-3 px-5">
                     <strong>Neem contact met ons op</strong>  
                 </button>

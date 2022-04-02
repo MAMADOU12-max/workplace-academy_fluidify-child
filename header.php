@@ -6,6 +6,16 @@
 <html class="ie ie8" <?php language_attributes(); ?>>
 <![endif]-->
 <!--[if !(IE 7) & !(IE 8)]><!-->
+<style>
+    @media screen and (max-width: 576px) {
+        .theme-button__secondary {
+            background-color: red;
+            padding: 0px;
+            font-weight: 500;
+        }
+    }
+</style>
+
 <html <?php language_attributes(); ?>>
     <!--<![endif]-->
     <head>
@@ -14,13 +24,15 @@
         <title><?php wp_title( '|', true, 'right' ); ?><?php echo get_bloginfo('blogname');?></title>
         <link rel="pingback" href="<?php echo esc_url( get_bloginfo( 'pingback_url' ) ); ?>">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/style.css" />
+       
         <!-- slick cdn css -->
         <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
         <?php wp_head(); ?>
     </head>
 
     <body <?php body_class(); ?>>
-        <header class="navbar navbar-default bg__primary">
+        <header class="navbar navbar-default bg__primary fixed-top">
             <div class="container">
                 <div class="navbar-header">
                     <div class="navbar-branding">

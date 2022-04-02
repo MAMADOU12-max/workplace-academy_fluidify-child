@@ -30,6 +30,10 @@ body {
   scroll-behavior: smooth;
 }
 
+.main {
+  margin-top: 50px;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -54,6 +58,12 @@ img {
 @media screen and (max-width: 768px) {
   .column-count-2 {
     column-count: 1;
+  }
+  ul.nav.navbar-nav  {
+    padding: 50px 25px !important;
+  }
+  .navbar-nav li {
+    font-size: 25px !important;
   }
 }
 
@@ -126,6 +136,11 @@ li a:hover {
   text-align: left;
   white-space: pre-line;
   font-size: 32px;
+  font-weight: bold
+}
+
+.img-side {
+   width: 200px;
 }
 
 .bg__primary {
@@ -768,12 +783,14 @@ h2 {
 }
 .theme-card_star-icon{
   font-size: 25px;
+  color: #316CB3;
 }
 .deborded_button {
   position: absolute;
   right: 5px;
   /* width: 170px; */
   background-color: #E89937;
+  border-radius: 35px 1px 1px 35px;
 }
 .theme-card__select-radio_content {
   /* background-color: red; */
@@ -1064,9 +1081,10 @@ ul.nav.navbar-nav.open-mobile-menu {
 @media screen and (max-width: 1024px) {
   /*/ mobile menu /*/
   .navbar.navbar-default {
-    position: fixed;
+    /* position: fixed; */
     z-index: 999999;
     width: 100%;
+    /* bottom: 500px; */
   }
 
   ul.nav.navbar-nav {
@@ -1181,9 +1199,15 @@ img.avatar.photo {
   padding-right: 20px;
   padding-left: 20px;
 }
-
+.note {
+   position: absolute;
+   top: 132px;
+}
 /*/ media queries /*/
 @media screen and (max-width: 768px) {
+  .card_side {
+      text-align: center;
+  }
   /* footer responsive */
   #footer {
     padding: 50px 20px;
@@ -1194,6 +1218,9 @@ img.avatar.photo {
   }
   .theme-hero .hero-title {
     text-align: center;
+  }
+  .hero-title{
+    font-size: 27px;
   }
 
   /*/ GLOBAL /*/
@@ -1234,81 +1261,88 @@ img.avatar.photo {
   .theme-time-block__wrapper h2 {
     text-align: center;
   }
+  .deborded_button_best-seller{
+      position: absolute;
+      right: 5px;
+  }
 }
 @media screen and (max-width: 576px) {
+  .main {
+    margin-top: 5px;
+  }
   /*/ PAGE Home /*/
   /*/ time block /*/
   .theme-usp-section {
-    overflow-x: scroll;
+      overflow-x: scroll;
   }
 
   .theme-usp-block__wrapper {
-    width: 900px;
+      width: 900px;
   }
 
   /*/ PAGE: GLOBAL /*/
   .theme-hero h2 {
-    text-align: center;
-    font-size: 28px;
+      text-align: center;
+      font-size: 25px;
   }
   .theme-hero p {
-    text-align: center;
+      text-align: center;
   }
   .theme-hero button {
-    margin: 0 auto;
-    display: block;
-    width: 100%;
-    margin-top: 10px;
+      margin: 0 auto;
+      display: block;
+      width: 100%;
+      margin-top: 10px;
   }
   .theme-hero img {
-    margin: 0 auto;
+      margin: 0 auto;
   }
 
   .theme-slider {
-    padding-left: 0;
-    padding-right: 0;
+      padding-left: 0;
+      padding-right: 0;
   }
   .theme-slider__slide__wrapper {
-    margin-right: 5px;
+      margin-right: 5px;
   }
 
   .theme-product__wrapper {
-    margin-bottom: 20px;
+      margin-bottom: 20px;
   }
   .theme-product__highlight__section__text {
-    padding-top: 50px;
-    padding-bottom: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
   }
 
   /*/ newsletter /*/
   .theme-banner .container-fluid {
-    padding: 0;
+      padding: 0;
   }
 
   .theme-banner__wrapper {
-    border-radius: 0;
+      border-radius: 0;
   }
   .theme-banner__input {
-    display: block;
-    width: 100%;
+      display: block;
+      width: 100%;
   }
   .theme-banner__button {
-    display: block;
-    margin-top: 10px;
+      display: block;
+      margin-top: 10px;
   }
 
   /*/ calendar & activities /*/
   .theme-calendar__dates-wrapper {
-    margin-right: 5px;
+      margin-right: 5px;
   }
   .theme-calendar__description__wrapper {
-    width: auto;
+      width: auto;
   }
   .theme-calendar__wrapper__button button {
-    width: 100%;
+      width: 100%;
   }
   .theme-calendar__event__category {
-    display: none;
+      display: none;
   }
 
   /*/ theme CTA block (voormalig signup manager block) /*/
@@ -1325,6 +1359,20 @@ img.avatar.photo {
   }
   .theme-cta__wrapper__items__description {
     margin: 0;
+  }
+
+  .theme-section {
+      padding-top: 5px;
+      padding-bottom: 0px;
+  }
+  .theme-button__secondary {
+      padding: 5px 10px;
+  }
+  .deborded_button_gesprek {
+     width: 135px;
+  }
+  .title-with_deborded-button{
+      width: 75%;
   }
 }
 
