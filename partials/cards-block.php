@@ -38,7 +38,7 @@
         <div class="row slider_slick bg-white">
 
             <div class="col-md-6 col-lg-3 p-1">
-                <a>
+                <a href="/workshop/opleiding/">
                     <div class="theme-card__wrapper">
                         <h4 class="theme-card__title">Opleiding</h4>
                         <div class="theme-card__duration">
@@ -47,7 +47,7 @@
                         <div class="d-flex bd-highlight mb-3">
                             <div class=" flex-grow-1 bd-highlight text-center mr-5">
                                 <span class="theme-card_star-icon"> &#9733;</span> 
-                                <span class="mb-1 note"> <strong>4,6 / 5</strong> </span> 
+                                <span class="mb-1 note text-dark"> <strong>4,6 / 5</strong> </span> 
                             </div>
                             <div class="bd-highlight">
                                 <!-- <button type="button" class="btn btn-success px-3 deborded_button">Neem Contact</button> -->
@@ -58,8 +58,8 @@
                         </div>
                         <div class="theme-card__description">“Must have voor iedereen die werkt met de hedendaagse werkomgeving.”</div>
 
-                        <div class="theme-card__select-radio_content">
-                            <div class="d-flex align-items-center">
+                        <div class="theme-card__select-radio_content text-dark">
+                            <div class="d-flex align-items-center ">
                                 <span class="point text-white px-2" style="font-size: 18px">&#11044;</span> 
                                 <span class="text-point" style="margin-top: 5px;">Theorie en praktijk </span>
                             </div>
@@ -91,7 +91,7 @@
             </div>
 
             <div class="col-md-6 col-lg-3 p-1">
-                <a href="<?php echo $card['fdfd_card_url']; ?>">
+                <a href="/masterclasses/">
                     <div class="theme-card__wrapper">
                         <h4 class="theme-card__title">Masterclasses</h4>
                         <div class="theme-card__duration">Praktische handvatten door de experts uit de markt</div>
@@ -133,7 +133,7 @@
                 </a>
             </div>
             <div class="col-md-6 col-lg-3 p-1">
-                <a href="<?php echo $card['fdfd_card_url']; ?>">
+                <a href="/workshops/">
                     <div class="theme-card__wrapper">
                         <h4 class="theme-card__title">Workshops</h4>
                         <div class="theme-card__duration">Specifieke thema’s in kortere kennissessies</div>
@@ -175,7 +175,7 @@
                 </a>
             </div>
             <div class="col-md-6 col-lg-3 p-1">
-                <a href="<?php echo $card['fdfd_card_url']; ?>">
+                <a href="/incompany/">
                     <div class="theme-card__wrapper">
                         <h4 class="theme-card__title">Events</h4>
                         <div class="theme-card__duration">Alle overige events mbt de werkomgeving</div>
