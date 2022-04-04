@@ -15,7 +15,7 @@
             <div class="col-md-6 offset-md-1 px-0">
                 <h2 class="hero-title">De toekomstbestendige werkomgeving vereist een integrale en hybride aanpak</h2>
                     <div class="theme-hero__content default-text">
-                            Wij noemen dit workplace management. Leer van de experts op het gebied van facility management, human resource management, duurzaamheid, IT, mobiliteit, vastgoed, bouw en gezondheid.
+                        Wij noemen dit workplace management. Leer van de experts op het gebied van facility management, human resource management, duurzaamheid, IT, mobiliteit, vastgoed, bouw en gezondheid.
                     </div>
                 <?php
                 // old button
@@ -71,5 +71,6 @@
                 </div>
             <!-- </section> -->
         </div>
+
     </div>
 </div>
