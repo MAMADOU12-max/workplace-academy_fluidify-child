@@ -36,7 +36,7 @@
             <div class="container">
                 <div class="navbar-header">
                     <div class="navbar-branding">
-                        <?php the_custom_logo();?>
+                        <a href="https://workplaceacademy.nl/" class="custom-logo-link" rel="home"><img src="https://workplaceacademy.nl/wp-content/uploads/2021/02/cropped-logoWorkPlaceAcademy_01.png" class="custom-logo" alt="Workplace Academy" srcset="https://workplaceacademy.nl/wp-content/uploads/2021/02/cropped-logoWorkPlaceAcademy_01.png 500w, https://workplaceacademy.nl/wp-content/uploads/2021/02/cropped-logoWorkPlaceAcademy_01-300x112.png 300w" sizes="(max-width: 500px) 100vw, 500px" width="500" height="186"></a>
                     </div>
                     <div class="navbar-mobile__wrapper">
                         <a href="/contact/" class="btn btn-default theme-button theme-button__secondary">Contact ons</a>

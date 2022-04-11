@@ -118,6 +118,10 @@ li a:hover {
   margin-bottom: 24px;
 }
 
+#menu-item-699 {
+  margin-left: 17px;
+}
+
 .navbar-branding {
   width: 125px;
 }
@@ -1382,6 +1386,11 @@ img.avatar.photo {
   .title-with_deborded-button{
       width: 75%;
   }
+
+  /* .items-slider-card {
+    background-color: #00A89D;
+    width: 320px !important;
+  } */
 }
 
 /* style text-block for the agenda section */

@@ -134,8 +134,8 @@
             </div>
         </div>
 
-        <div class="row flex-column-reverse flex-md-row d-flex justify-content-center mt-5  align-items-center
-         mr-md-0 mr-1 card_side">           
+        <div class="row flex-column-reverse flex-md-row d-flex justify-content-center mt-5 pt-5 align-items-center
+            mr-md-0 mr-1 card_side">           
             <div class="col-md-5 m-2">
                 <h2 class="hero-title card_side">Toekomstbestendige werkomgeving vereist een</h2>
                 <div class="theme-hero__content default-text ">
