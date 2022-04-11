@@ -166,7 +166,7 @@
                 </div>
             </div>
 
-            <div class="row d-flex justify-content-center mt-5  align-items-center">           
+            <div class="row d-flex justify-content-center mt-5 pt-5  align-items-center">           
                 <div class="col-md-5 m-2">
                     <img class="im-fluid " style="width: 100%;max-height: 300px"
                     src="<?php  echo get_stylesheet_directory_uri() . '/assets/img/austin-distel-Etxsv8WiFjM-unsplash-1536x1024.jpg' ?>">    
@@ -205,7 +205,9 @@
                     <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+                        <button type="button" class="btn-close bg-danger btn text-white" data-bs-dismiss="modal" aria-label="Close">
+                            <strong>X</strong> 
+                        </button>
                     </div>
                     <div class="modal-body p-5">
 
@@ -239,14 +241,16 @@
                             </div>
 
                             <!-- Submit button -->
-                            <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                            <button type="submit" class="btn btn-block text-white" style="background-color: #0B6EB9;">
+                                 <strong> Sign in</strong> 
+                            </button>
                         </form>
 
                     </div>
-                    <div class="modal-footer">
+                    <!-- <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary">Understood</button>
-                    </div>
+                    </div> -->
                     </div>
                 </div>
             </div>

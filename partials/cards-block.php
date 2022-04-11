@@ -23,11 +23,26 @@
 <!-- click cdn css -->
 <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
 <style>
-    /* @media screen and (max-width: 576px) {
-        .theme-section {
-            padding-top: 5px;
+    @media screen and (max-width: 400px) {
+            /* .slick-active {
+                margin-left: 30px;
+            } */
+        .items-slider-card1 {
+            width: 340px !important;
         }
-    }      */
+        .items-slider-card2 {
+            width: 340px !important;
+            margin-left: 3px;
+        }
+        .items-slider-card3 {
+            width: 340px !important;
+            margin-left: 10px;
+        }
+        .items-slider-card4 {
+            width: 345px !important;
+            margin-left: 10px;
+        }
+    }     
 </style>
 <head>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
@@ -35,9 +50,9 @@
 </head>
 <div class="theme-section alt pt-0">
     <div class="container">
-        <div class="row slider_slick bg-white">
+        <div class="row slider_slick bg-white bg-info">
 
-            <div class="col-md-6 col-lg-3 p-1">
+            <div class="col-md-6 col-lg-3 p-1 items-slider-card1">
                 <a href="/workshop/opleiding/">
                     <div class="theme-card__wrapper">
                         <h4 class="theme-card__title">Opleiding</h4>
@@ -54,7 +69,7 @@
                                 <button type="button" class="btn text-white px-3 deborded_button deborded_button_best-seller">
                                     <strong>Best-seller!    </strong>  
                                 </button>
-                            </div>
+                            </div>²
                         </div>
                         <div class="theme-card__description">“Must have voor iedereen die werkt met de hedendaagse werkomgeving.”</div>
 
@@ -89,8 +104,7 @@
                     </div>
                 </a>
             </div>
-
-            <div class="col-md-6 col-lg-3 p-1">
+            <div class="col-md-6 col-lg-3 p-1 items-slider-card2">
                 <a href="/masterclasses/">
                     <div class="theme-card__wrapper">
                         <h4 class="theme-card__title">Masterclasses</h4>
@@ -132,7 +146,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 col-lg-3 p-1">
+            <div class="col-md-6 col-lg-3 p-1 items-slider-card3">
                 <a href="/workshops/">
                     <div class="theme-card__wrapper">
                         <h4 class="theme-card__title">Workshops</h4>
@@ -174,7 +188,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6 col-lg-3 p-1">
+            <div class="col-md-6 col-lg-3 p-1 items-slider-card4">
                 <a href="/incompany/">
                     <div class="theme-card__wrapper">
                         <h4 class="theme-card__title">Events</h4>
@@ -310,7 +324,7 @@
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow:1,
                     slidesToScroll: 1
                 }
             }
