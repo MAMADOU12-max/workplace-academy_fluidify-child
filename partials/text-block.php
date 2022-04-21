@@ -14,6 +14,7 @@
                     'author_id' => get_post_field('post_author', $calendar->ID),
                 'price' => $date_series['price'],
                 'post_title'=> get_post_field('post_title', $calendar->ID),
+                'image'=> get_the_post_thumbnail_url($calendar->ID),
             );
         }
     }
@@ -160,11 +161,11 @@
             </div>
 
             <div class="sousBlockFrontAgenda">
+
                 <?php foreach($calendar_arr as $workshop){  ?>    
-                       
                     <a href="<?php esc_url(the_permalink($workshop['id'])); ?>" class="blockCardFront rounded rounded-3" style="color:#43454D">
                         <div class="workshopBlock">
-                            <img class="" src="<?php echo get_stylesheet_directory_uri();?>/assets/img/placeholder.png" alt="">
+                            <img class="" src=<?php echo $workshop['image'] ;?> alt="">
                             <div class="containWorkshopAgenda">
                                 <p class="workshopText"> <?php $category = get_the_category($workshop['id']); echo $category[0]->name;?> </p>
                                 <div class="blockDateFront">

@@ -272,9 +272,12 @@
             <div class="col-md-5 mx-auto">
                 <div class="theme-form__wrapper">
                     <h4>Bel mij terug</h4>
-<noscript class="ninja-forms-noscript-message">
+<!-- <noscript class="ninja-forms-noscript-message"> -->
     Kennisgeving: Voor dit product is een JavaScript vereist.</noscript><div id="nf-form-4-cont" class="nf-form-cont" aria-live="polite" aria-labelledby="nf-form-title-4" aria-describedby="nf-form-errors-4" role="form">
-
+    <?php
+             echo do_shortcode('[ninja_form id=1]');         
+    ?>
+            
     <div class="nf-loading-spinner"></div>
 
 </div>
@@ -286,7 +289,7 @@
             <div class="col-md-5">
                 <div class="theme-form__second-col">
                     <div class="text-default">
-                        <h2>Wij gaan graag het gesprek met je aan</h2>
+                        <h2>Wij gaan graag het gesprek met je aan sdv</h2>
 <p><span style="font-weight: 400;">Twijfel niet en neem contact met ons op! Samen kijken wij naar de beste opleidingsmogelijkheden voor jou of  jouw organisatie. </span></p>
                     </div>
                 </div>
