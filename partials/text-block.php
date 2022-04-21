@@ -62,8 +62,8 @@
         <div class="row">
             <div class="col-md-6 col-lg-3 p-1" style="height: 230px;">
                <a>
-                    <div class="theme-card__wrapper text-center py-4">
-                        <img class="img-fluid" style="max-width: 150px;"
+                    <div class="theme-card__wrapper text-center py-4 pt-5">
+                        <img class="img-fluid" style="max-width: 100px;"
                         src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Facilitair.png' ?>">    
                         <h4 class="theme-card__title mt-2 mb-0">Facilitair</h4>
                     </div>
@@ -72,8 +72,8 @@
 
             <div class="col-md-6 col-lg-3 p-1" style="height: 230px;">
                 <a>
-                    <div class="theme-card__wrapper text-center py-4">
-                        <img class="img-fluid" style="max-width: 150px;"
+                    <div class="theme-card__wrapper text-center py-4 pt-5">
+                        <img class="img-fluid" style="max-width: 100px;"
                         src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/HR.png' ?>">    
                         <h4 class="theme-card__title mt-2 mb-0">HR</h4>
                     </div>
@@ -81,8 +81,8 @@
             </div>
             <div class="col-md-6 col-lg-3 p-1" style="height: 230px;">
                 <a>
-                    <div class="theme-card__wrapper text-center py-4">
-                        <img class="img-fluid" style="max-width: 150px;"
+                    <div class="theme-card__wrapper text-center py-4 pt-5">
+                        <img class="img-fluid" style="max-width: 100px;"
                         src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Real_Estate.png' ?>">    
                         <h4 class="theme-card__title mt-2 mb-0">Real Estate</h4>
                     </div>
@@ -90,8 +90,8 @@
             </div>
             <div class="col-md-6 col-lg-3 p-1" style="height: 230px;">
                 <a>
-                    <div class="theme-card__wrapper text-center py-4">
-                        <img class="img-fluid" style="max-width: 150px;"
+                    <div class="theme-card__wrapper text-center py-4 pt-5">
+                        <img class="img-fluid" style="max-width: 100px;"
                         src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/IT.png' ?>">    
                         <h4 class="theme-card__title mt-2 mb-0">IT</h4>
                     </div>
@@ -101,8 +101,8 @@
         <div class="row">
             <div class="col-md-6 col-lg-3 p-1" style="height: 230px;">
                <a>
-                    <div class="theme-card__wrapper text-center py-4">
-                        <img class="img-fluid" style="max-width: 150px;"
+                    <div class="theme-card__wrapper text-center py-4 pt-5">
+                        <img class="img-fluid" style="max-width: 100px;"
                         src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/mobiliteit.png' ?>">    
                         <h4 class="theme-card__title mt-2 mb-0">Mobiliteit</h4>
                     </div>
@@ -111,8 +111,8 @@
 
             <div class="col-md-6 col-lg-3 p-1" style="height: 230px;">
                 <a>
-                    <div class="theme-card__wrapper text-center py-4">
-                        <img class="img-fluid" style="max-width: 150px;"
+                    <div class="theme-card__wrapper text-center py-4 pt-5">
+                        <img class="img-fluid" style="max-width: 100px;"
                         src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Duurzaamheid.png' ?>">    
                         <h4 class="theme-card__title mt-2 mb-0">Duurzaamheid</h4>
                     </div>
@@ -120,8 +120,8 @@
             </div>
             <div class="col-md-6 col-lg-3 p-1" style="height: 230px;">
                 <a>
-                    <div class="theme-card__wrapper text-center py-4">
-                        <img class="img-fluid" style="max-width: 150px;"
+                    <div class="theme-card__wrapper text-center py-4 pt-5">
+                        <img class="img-fluid" style="max-width: 100px;"
                         src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Adviseurs.png' ?>">    
                         <h4 class="theme-card__title mt-2 mb-0">Adviseurs</h4>
                     </div>
@@ -129,8 +129,8 @@
             </div>
             <div class="col-md-6 col-lg-3 p-1" style="height: 230px;">
                 <a>
-                    <div class="theme-card__wrapper text-center py-4">
-                        <img class="img-fluid" style="max-width: 150px;"
+                    <div class="theme-card__wrapper text-center py-4 pt-5">
+                        <img class="img-fluid" style="max-width: 100px;"
                         src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Leveranciers.png' ?>">    
                         <h4 class="theme-card__title mt-2 mb-0">Leveranciers</h4>
                     </div>
@@ -160,7 +160,6 @@
             </div>
 
             <div class="sousBlockFrontAgenda">
-
                 <?php foreach($calendar_arr as $workshop){  ?>    
                        
                     <a href="<?php esc_url(the_permalink($workshop['id'])); ?>" class="blockCardFront rounded rounded-3" style="color:#43454D">

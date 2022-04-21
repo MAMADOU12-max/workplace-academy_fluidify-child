@@ -17,7 +17,7 @@
 ?>
 
 <div class="theme-slider bg__lightblue">
-    <div class="container-fluid">
+    <div class="container">
         <!-- <div class="row">
             <div class="col-md-12">
                 <h2>Masterclassesddddddd</h2>
@@ -80,33 +80,52 @@
         <div class="row d-flex justify-content-center">
         
 
-            <!-- <div class="col-md-4 d-flex justify-content-center">
-                <div class="card m-2" style="width: 20rem;">
-                    <img src="<?php echo get_stylesheet_directory_uri();?>/assets/img/Daniel-van-der-Kolk-300x294.jpg"
-                     class="card-img-top" alt="Fissure in Sandstone" style="height:13rem"/>
-                    <div class="card-body text-dark">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div> -->
-
-            <?php
-                foreach ($blog as $key => $value) {
-            ?>                
                 <div class="col-md-4 d-flex justify-content-center">
-                    <div class="card m-2" style="width: 20rem;">
-                        <img src="<?php echo $value["image"];?>"
-                        class="card-img-top" alt="Fissure in Sandstone" style="height:13rem"/>
-                        <div class="card-body text-dark">
-                            <h5 class="card-title"> <?php echo $value["title"] ?></h5>
-                            <p class="card-text"> <?php echo $value["content"] ?> </p>
+                    <div class="card my-md-2 my-3 mx-md-0 mx-2" style="max-width: 25rem;">
+                        <img src="https://images.unsplash.com/photo-1650465725382-a9f2754f2d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1175&q=80"
+                        class="card-img-top" alt="Fissure in Sandstone" style="height:14rem"/>
+                        <div class="card-body text-dark" style="height:16rem">
+                            <h5 class="card-title"> Lorem, ipsum dolor.</h5>
+                            <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, mollitia?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, mollitia?
+                                <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, mollitia?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, mollitia?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, mollitia? -->
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo omnis doloremque id consequatur iusto. Esse? </p>
                         </div>
                     </div>
                 </div>
-            <?php
-                }
-            ?>
+
+                <div class="col-md-4 d-flex justify-content-center ">
+                    <div class="card my-md-2 my-3 mx-md-0 mx-2" style="max-width: 25rem;">
+                        <img src="https://images.unsplash.com/photo-1650465725382-a9f2754f2d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1175&q=80"
+                        class="card-img-top" alt="Fissure in Sandstone" style="height:14rem"/>
+                        <div class="card-body text-dark bg-danger" style="height:16rem">
+                            <h5 class="card-title"> Lorem, ipsum dolor.</h5>
+                            <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, mollitia?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, mollitia?
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo omnis doloremque id consequatur iusto. Esse? </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 d-flex justify-content-center">
+                    <div class="card my-md-2 my-3 mx-md-0 mx-2" style="max-width: 25rem;">
+                        <img src="https://images.unsplash.com/photo-1650465725382-a9f2754f2d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1175&q=80"
+                        class="card-img-top" alt="Fissure in Sandstone" style="height:14rem"/>
+                        <div class="card-body text-dark" style="height:16rem">
+                            <h5 class="card-title"> Lorem, ipsum dolor.</h5>
+                            <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, mollitia?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, mollitia?
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo omnis doloremque id consequatur iusto. Esse? </p>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                
+                <!-- -------------------------------------------------------------- start card ---------------------------------------------------------- -->
+                <!-- -------------------------------------------------------------- end card --------------------------------------------------------------->
             
         </div>
 

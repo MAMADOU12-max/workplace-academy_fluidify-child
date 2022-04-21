@@ -24,9 +24,6 @@
 <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
 <style>
     @media screen and (max-width: 400px) {
-            /* .slick-active {
-                margin-left: 30px;
-            } */
         .items-slider-card1 {
             width: 340px !important;
         }
@@ -43,6 +40,15 @@
             margin-left: 10px;
         }
     }     
+    .items-slider-card2.slick-slide.slick-current.slick-active {
+        margin-left: 25px;
+    }
+    .items-slider-card3.slick-slide.slick-current.slick-active {
+        margin-left:  50px;
+    }
+    .items-slider-card4.slick-slide.slick-current.slick-active {
+        margin-left: 70px;
+    }
 </style>
 <head>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
