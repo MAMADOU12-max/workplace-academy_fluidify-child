@@ -253,5 +253,82 @@ function custom_post_type() {
         'taxonomies'          => array('post_tag', 'category'),
     );
     register_post_type( 'expert', $experts_args );
+
+    $labels_project = array(
+		// Le nom au pluriel
+		'name'                => _x( 'Projects','projects'),
+		// Le nom au singulier
+		'singular_name'       => _x( 'project', 'project'),
+		// Le libellé affiché dans le menu
+		'menu_name'           => __( 'Project'),
+		// Les différents libellés de l'administration
+		'all_items'           => __( 'All projects'),
+		'view_item'           => __( 'See all projects'),
+		'add_new_item'        => __( 'Add new project'),
+		'add_new'             => __( 'Add'),
+		'edit_item'           => __( 'Edit project'),
+		'update_item'         => __( 'Update project'),
+		'search_items'        => __( 'Search project'),
+		'not_found'           => __( 'No project found'),
+		'not_found_in_trash'  => __( 'Not found'),
+	);
+
+    $args_project = array(
+		'label'               => __( 'Projects'),
+		'description'         => __( 'Description'),
+		'labels'              => $labels_project,
+		// On définit les options disponibles dans l'éditeur de notre custom post type ( un titre, un auteur...)
+		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields' ),
+		/* 
+		* Différentes options supplémentaires
+		*/
+		'show_in_rest' => true,
+		'hierarchical'        => false,
+		'public'              => true,
+		'has_archive'         => true,
+		'rewrite'			  => array( 'slug' => 'project-done'),
+
+	);
+    // On enregistre notre custom post type qu'on nomme ici "serietv" et ses arguments
+	register_post_type( 'project_done', $args_project );
+
+
+    $labels_blog = array(
+		// Le nom au pluriel
+		'name'                => _x( 'Blogs','blogs'),
+		// Le nom au singulier
+		'singular_name'       => _x( 'Blog', 'blog'),
+		// Le libellé affiché dans le menu
+		'menu_name'           => __( 'Blog'),
+		// Les différents libellés de l'administration
+		'all_items'           => __( 'All articles'),
+		'view_item'           => __( 'See all article'),
+		'add_new_item'        => __( 'Add new article'),
+		'add_new'             => __( 'Add'),
+		'edit_item'           => __( 'Edit article'),
+		'update_item'         => __( 'Update article'),
+		'search_items'        => __( 'Search article'),
+		'not_found'           => __( 'No article found'),
+		'not_found_in_trash'  => __( 'Not found'),
+	);
+
+    $args_blog = array(
+		'label'               => __( 'Blog'),
+		'description'         => __( 'Description'),
+		'labels'              => $labels_blog,
+		// On définit les options disponibles dans l'éditeur de notre custom post type ( un titre, un auteur...)
+		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields' ),
+		/* 
+		* Différentes options supplémentaires
+		*/
+		'show_in_rest' => true,
+		'hierarchical'        => false,
+		'public'              => true,
+		'has_archive'         => true,
+		'rewrite'			  => array( 'slug' => 'article-blog'),
+
+	);
+    // On enregistre notre custom post type qu'on nomme ici "serietv" et ses arguments
+	register_post_type( 'blog', $args_blog );
 }
 add_action( 'init', 'custom_post_type', 0 );

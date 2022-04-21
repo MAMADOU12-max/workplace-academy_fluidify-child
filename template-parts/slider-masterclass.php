@@ -1,3 +1,21 @@
+<?php
+    $blog=array();
+    $loop_blog = new WP_Query( 'posts_per_page=5' ); 
+    while ( $loop_blog->have_posts() ) : $loop_blog->the_post();
+    $blog[]=array(
+        'title'=>the_title_attribute( 'echo=0' ),
+        'content'=>get_the_content(),
+        'image'=>get_the_post_thumbnail_url(),
+        'link'=>get_field('link'),
+        'except'=>get_the_excerpt(),
+    );
+    // the_title( '<h2 class="entry-title"><a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark">', '</a></h2>' ); 
+    // the_content();
+    // the_post_thumbnail('thumbnail');
+    endwhile;
+   // var_dump($blog);
+?>
+
 <div class="theme-slider bg__lightblue">
     <div class="container-fluid">
         <!-- <div class="row">
@@ -62,7 +80,7 @@
         <div class="row d-flex justify-content-center">
         
 
-            <div class="col-md-4 d-flex justify-content-center">
+            <!-- <div class="col-md-4 d-flex justify-content-center">
                 <div class="card m-2" style="width: 20rem;">
                     <img src="<?php echo get_stylesheet_directory_uri();?>/assets/img/Daniel-van-der-Kolk-300x294.jpg"
                      class="card-img-top" alt="Fissure in Sandstone" style="height:13rem"/>
@@ -71,27 +89,29 @@
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 d-flex justify-content-center">
-                <div class="card m-2" style="width: 20rem;">
-                    <img src="<?php echo get_stylesheet_directory_uri();?>/assets/img/Daniel-van-der-Kolk-300x294.jpg"
-                     class="card-img-top" alt="Fissure in Sandstone" style="height:13rem"/>
-                    <div class="card-body text-dark">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div> -->
+
+            <?php
+                foreach ($blog as $key => $value) {
+            ?>                
+                <div class="col-md-4 d-flex justify-content-center">
+                    <div class="card m-2" style="width: 20rem;">
+                        <img src="<?php echo $value["image"];?>"
+                        class="card-img-top" alt="Fissure in Sandstone" style="height:13rem"/>
+                        <div class="card-body text-dark">
+                            <h5 class="card-title"> <?php echo $value["title"] ?></h5>
+                            <p class="card-text"> <?php echo $value["except"] ?> </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 d-flex justify-content-center">
-                <div class="card m-2" style="width: 20rem;">
-                    <img src="<?php echo get_stylesheet_directory_uri();?>/assets/img/Daniel-van-der-Kolk-300x294.jpg"
-                     class="card-img-top" alt="Fissure in Sandstone" style="height:13rem"/>
-                    <div class="card-body text-dark">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
+            <?php
+                }
+        
+                
+            ?>
+            
+            
+
         </div>
 
         <div class="row">
