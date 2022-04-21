@@ -1059,6 +1059,9 @@ ul.nav.navbar-nav.open-mobile-menu {
   font-weight: bold;
   margin-left: 8px;
 }
+.text-end-define-lg{
+  text-align: end;
+}
 @media screen and (max-width: 768px) {
   .form-subscribe .nf-form-content nf-fields-wrap {
     display: block;
@@ -1071,6 +1074,10 @@ ul.nav.navbar-nav.open-mobile-menu {
   }
   .deborded_button {
     right: 16px;
+  }
+  .text-center-define {
+      text-align: center;
+      /* background-color: #0B6EB9;  */
   }
 }
 

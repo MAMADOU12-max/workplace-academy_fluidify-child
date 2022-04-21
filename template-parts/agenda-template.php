@@ -1,5 +1,46 @@
 <?php /** Template Name: Agenda template */ ?>
 
+<?php
+    $args = array(
+        'post_type' => 'workshop',
+    );
+    $query = new WP_Query( $args );
+    $calendar_arr = array();
+    foreach($query->get_posts() as $calendar) {
+        //var_dump($calendar);break;
+        foreach(get_field('date_series', $calendar->ID) as $date_series) {
+            $calendar_arr[date('Y-m-d', strtotime($date_series['date_series_start']))] = array(
+                'id' => $calendar->ID,
+                'start' => $date_series['date_series_start'],
+                'author' => get_the_author_meta('display_name', get_post_field('post_author', $calendar->ID)),
+                    'author_id' => get_post_field('post_author', $calendar->ID),
+                'price' => $date_series['price'],
+                'post_title'=> get_post_field('post_title', $calendar->ID),
+            );
+        }
+    }
+    ksort($calendar_arr);
+    //var_dump($calendar_arr);
+    //var_dump($loop);
+    $project_done=array();
+    $loop = new WP_Query( array( 'post_type' => 'project_done', 'posts_per_page' => 4 ) ); 
+    while ( $loop->have_posts() ) : $loop->the_post();
+    $project_done[]=array(
+        'title'=>the_title_attribute( 'echo=0' ),
+        'content'=>get_the_content(),
+        'image'=>get_the_post_thumbnail_url(),
+        'link'=>get_field('link'),
+        'except'=>get_the_excerpt(),
+    );
+    // the_title( '<h2 class="entry-title"><a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark">', '</a></h2>' ); 
+    // the_content();
+    // the_post_thumbnail('thumbnail');
+    endwhile;
+    //var_dump($project_done);        
+
+?>
+
+
 <body class="page-template-default page page-id-63 wp-custom-logo">
 
     <!-- require header -->
@@ -25,7 +66,7 @@
 
 <!-- ---------------------------------------------- start agenda ---------------------------------------------- -->
 
-<div class="blockAgenda mt-5">
+<div class="blockAgenda mt-5 mx-0 mx-md-3">
 
     <div class="blockFrontAgenda">
         <div class="container px-0">
@@ -36,84 +77,56 @@
                 </div>
             </div>
 
-            <div class="sousBlockFrontAgenda">             
-                <a href="<?php echo get_permalink($course->ID) ?>" class="blockCardFront rounded rounded-3" style="color:#43454D">
-                    <div class="workshopBlock">
-                        <img class="" src="<?php echo get_stylesheet_directory_uri();?>/assets/img/placeholder.png" alt="">
-                        <div class="containWorkshopAgenda">
-                            <p class="workshopText">workshop text</p>
-                            <div class="blockDateFront">
-                                <p class="moiText">day</p>
-                                <p class="dateText" style="font-size: 11px">month</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="deToekomstBlock">
-                        <p class="deToekomstText text-uppercase"> <strong>title post</strong></p>
-                        <p class="platformText">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est perferendis, velit eos similique optio neque minus deleniti sapiente ea beatae!
-                        </p>
-                        <div class="detaiElementAgenda">
-                            <div class="janBlock">
-                                <div class="colorFront">
-                                    <img src="<?php echo $company_logo; ?>" width="15" alt="">
-                                </div>
-                                <p class="textJan">title company</p>
-                            </div>
-                            <div class="euroBlock">
-                                <img class="euroImg" src="<?php echo get_stylesheet_directory_uri();?>/assets/img/euro.png" alt="">
-                                <p class="textJan">price</p>
-                            </div>
-                            <div class="zwoleBlock">
-                                <img class="ss" src="<?php echo get_stylesheet_directory_uri();?>/assets/img/ss.png" alt="">
-                                <p class="textJan">localisation</p>
-                            </div>
-                            <div class="facilityBlock">
-                                <img class="faciltyImg" src="<?php echo get_stylesheet_directory_uri();?>/assets/img/map-search.png" alt="">
-                                <p class="textJan">test Jan</p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+            <div class="sousBlockFrontAgenda">
 
-                <a href="<?php echo get_permalink($course->ID) ?>" class="blockCardFront" style="color:#43454D">
-                    <div class="workshopBlock">
-                        <img class="" src="<?php echo get_stylesheet_directory_uri();?>/assets/img/placeholder.png" alt="">
-                        <div class="containWorkshopAgenda">
-                            <p class="workshopText">workshop text</p>
-                            <div class="blockDateFront">
-                                <p class="moiText">day</p>
-                                <p class="dateText" style="font-size: 11px">month</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="deToekomstBlock">
-                    <p class="deToekomstText text-uppercase"> <strong>title article 2</strong></p>
-                        <p class="platformText">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est perferendis, velit eos similique optio neque minus deleniti sapiente ea beatae!
-                        </p>
-                        <div class="detaiElementAgenda">
-                            <div class="janBlock">
-                                <div class="colorFront">
-                                    <img src="<?php echo $company_logo; ?>" width="15" alt="">
+                <?php foreach($calendar_arr as $workshop){  ?>    
+                       
+                    <a href="<?php esc_url(the_permalink($workshop['id'])); ?>" class="blockCardFront rounded rounded-3" style="color:#43454D">
+                        <div class="workshopBlock">
+                            <img class="" src="<?php echo get_stylesheet_directory_uri();?>/assets/img/placeholder.png" alt="">
+                            <div class="containWorkshopAgenda">
+                                <p class="workshopText"> <?php $category = get_the_category($workshop['id']); echo $category[0]->name;?> </p>
+                                <div class="blockDateFront">
+                                    <p class="moiText"><?php echo date("d", strtotime($workshop['start'])); ?></p>
+                                    <p class="dateText" style="font-size: 11px">
+                                    <?php
+                                        $dateObj   = DateTime::createFromFormat('!m', date("m", strtotime($workshop['start'])));
+                                        $monthName = $dateObj->format('F'); 
+                                        echo $monthName;
+                                    ?>
+                                </p>
                                 </div>
-                                <p class="textJan">title company</p>
-                            </div>
-                            <div class="euroBlock">
-                                <img class="euroImg" src="<?php echo get_stylesheet_directory_uri();?>/assets/img/euro.png" alt="">
-                                <p class="textJan">price</p>
-                            </div>
-                            <div class="zwoleBlock">
-                                <img class="ss" src="<?php echo get_stylesheet_directory_uri();?>/assets/img/ss.png" alt="">
-                                <p class="textJan">localisation</p>
-                            </div>
-                            <div class="facilityBlock">
-                                <img class="faciltyImg" src="<?php echo get_stylesheet_directory_uri();?>/assets/img/map-search.png" alt="">
-                                <p class="textJan">test Jan</p>
                             </div>
                         </div>
-                    </div>
-                </a>
+                        <div class="deToekomstBlock">
+                            <p class="deToekomstText text-uppercase"> <strong><?php echo $workshop['post_title'];?></strong></p>
+                            <p class="platformText">
+                            <?php echo get_the_excerpt($workshop['id']);?>
+                            </p>
+                            <div class="detaiElementAgenda">
+                                <div class="janBlock">
+                                    <div class="colorFront">
+                                        <img src="<?php echo $company_logo; ?>" width="15" alt="">
+                                    </div>
+                                    <p class="textJan"><?php echo $workshop['author'] ?></p>
+                                </div>
+                                <div class="euroBlock">
+                                    <img class="euroImg" src="<?php echo get_stylesheet_directory_uri();?>/assets/img/euro.png" alt="">
+                                    <p class="textJan"><?php echo $workshop['price']; ?></p>
+                                </div>
+                                <!-- <div class="zwoleBlock">
+                                    <img class="ss" src="<?php echo get_stylesheet_directory_uri();?>/assets/img/ss.png" alt="">
+                                    <p class="textJan">localisation</p>
+                                </div> -->
+                                <!-- <div class="facilityBlock">
+                                    <img class="faciltyImg" src="<?php echo get_stylesheet_directory_uri();?>/assets/img/map-search.png" alt="">
+                                    <p class="textJan"><?php echo $workshop["post_date"] ?></p>
+                                </div> -->
+                            </div>
+                        </div>
+                    </a>
+       
+                <?php } ?>  
             </div>
 
             <div class="row">
@@ -244,38 +257,7 @@
     </div>
 </div></div>
 
-<!------ dont remove other why a spinner will appear at the searcch  place on the footer
- <footer id="footer" class="bg__grey">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-3">
-                <section class="footer-area footer-area-one">
-                    <img src="http://localhost/workplaceacademy/wp-content/themes/fluidify-child/assets/img/logoWorkPlaceAcademy_01.png" class="image wp-image-309  attachment-150x56 size-150x56"
-                     alt="" loading="lazy" style="max-width: 100%; height: auto;" sizes="(max-width: 150px) 100vw, 150px" width="150" height="56">
-                </section>
-                <section class="footer-area footer-area-one">			
-                    <div class="textwidget">
-                        <p class="pt-3">info@workplaceacademy.nl</p>
-                    </div>
-		        </section>            
+ 
 
-            </div>
-            
-
-            <div class="col-md-3 text-white">
-                <?php dynamic_sidebar( 'footer_area_two' ); ?>
-            </div>
-
-            <div class="col-md-3 text-white">
-                <?php dynamic_sidebar( 'footer_area_three' ); ?>
-            </div>
-
-            <div class="col-md-3 text-white">
-                <?php dynamic_sidebar( 'footer_area_four' ); ?>
-            </div>
-        </div>
-    </div>
-</footer> 
-
-
+<!-- require footer -->
 <?php get_footer(); ?>

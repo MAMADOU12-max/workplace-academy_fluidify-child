@@ -14,22 +14,33 @@
         } 
 
     }
+    @media screen and (max-width: 576px) {
+        .theme-hero h2 {
+            font-size: 25px;
+        }
+        .description-title {
+            font-size: 18px;
+        }
+    }
 </style>
-<div class="theme-hero <?php echo get_field('fdfd_bg_color'); ?>">
+
+
+<div class="theme-section <?php echo get_field('fdfd_bg_color'); ?>">
     <div class="container">
-        <div class="row flex-column-reverse flex-md-row align-items-center">
-            <div class="col-md-6 offset-md-1">
-                <h2 class="hero-title">De toekomstbestendige werkomgeving vereist een integrale en hybride aanpak</h2>
-                <div class="theme-hero__content default-text">
-                 Wij noemen dit workplace management. Leer van de experts op het gebied van facility management, human resource management, duurzaamheid, IT, mobiliteit, vastgoed, bouw en gezondheid.
+        
+        <div class="row flex-column-reverse flex-md-row align-items-center text-center-define">
+            <div class="col-md-7 px-0 text-md-start ">
+                <h2 class="hero-title text-center-define">De toekomstbestendige werkomgeving vereist een integrale en hybride aanpak</h2>
+                <div class="theme-hero__content default-text ">
+                    <h5 class="description-title">
+                      Wij noemen dit workplace management. Leer van de experts op het gebied van facility management, human resource management, duurzaamheid, IT, mobiliteit, vastgoed, bouw en gezondheid.
+                    </h5>
                 </div>
                 <a href="#" class="btn btn-default theme-button bg__secondary">Neem contact op</a>
             </div>
-            <div class="col-md-5">
-                <!-- <img src="<?php echo get_field('fdfd_image'); ?>" style="height:auto;"> -->
+            <div class="col-md-5 px-0 py-md-1 py-4 pt-md-1 pt-5 mt-4 text-end-define-lg text-center-define">                
                 <img class="im-fluid w-75" style=""
-                src="<?php  echo get_stylesheet_directory_uri() . '/assets/img/Afbeelding-opleiding-workplace-management.001.png' ?>">
-    
+                src="<?php  echo get_stylesheet_directory_uri() . '/assets/img/Afbeelding-opleiding-workplace-management.001.png' ?>">    
             </div>
         </div>
 
@@ -67,6 +78,7 @@
 
     </div>
 </div>
+
 
 
 <div class="theme-section pb-2" style="padding-top: 0px">
@@ -118,13 +130,13 @@
         </div>
 
 
-        <div class="row d-flex justify-content-center mt-5  align-items-center">           
-            <div class="col-md-5 m-2">
-                <img class="im-fluid " style="width: 100%;max-height: 300px"
+        <div class="row d-flex justify-content-between mt-5  align-items-center">           
+            <div class="col-md-6">
+                <img class="im-fluid " style="width: 100%;max-height: 350px"
                 src="<?php  echo get_stylesheet_directory_uri() . '/assets/img/austin-distel-Etxsv8WiFjM-unsplash-1536x1024.jpg' ?>">    
             </div>
 
-            <div class="col-md-5 m-2 card_side">
+            <div class="col-md-6 card_side mt-3">
                 <h2 class="hero-title card_side">Toekomstbestendige werkomgeving vereist een</h2>
                 <div class="theme-hero__content default-text">
                     Wij noemen dit workplace management. Leer van de experts op het gebied van facility management, human resource management, duurzaamheid, IT, mobiliteit, vastgoed, bouw en gezondheid.
@@ -134,9 +146,9 @@
             </div>
         </div>
 
-        <div class="row flex-column-reverse flex-md-row d-flex justify-content-center mt-5 pt-5 align-items-center
+        <div class="row flex-column-reverse flex-md-row d-flex justify-content-center mt-4 pt-5 align-items-center
             mr-md-0 mr-1 card_side">           
-            <div class="col-md-5 m-2">
+            <div class="col-md-6 mt-3">
                 <h2 class="hero-title card_side">Toekomstbestendige werkomgeving vereist een</h2>
                 <div class="theme-hero__content default-text ">
                     Wij noemen dit workplace management. Leer van de experts op het gebied van facility management, human resource management, duurzaamheid, IT, mobiliteit, vastgoed, bouw en gezondheid.
@@ -144,8 +156,8 @@
                 </div>
                 <a href="#" class="btn btn-default theme-button bg__secondary px-5"> <strong>Lees meer</strong> </a>
             </div>
-            <div class="col-md-5 m-2">
-                <img class="im-fluid " style="width: 100%;max-height: 300px"
+            <div class="col-md-6">
+                <img class="im-fluid " style="width: 100%;max-height: 350px"
                 src="<?php  echo get_stylesheet_directory_uri() . '/assets/img/austin-distel-Etxsv8WiFjM-unsplash-1536x1024.jpg' ?>">    
             </div>
         </div>
@@ -153,7 +165,7 @@
 
         <!-- --------------------------------------- Voor Wie Section & Cards ------------------------------------------ -->
 
-        <div class="theme-section mt-3">
+        <div class="theme-section mt-5">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-center mx-auto col-12">
@@ -254,12 +266,11 @@
         <div class="row d-flex justify-content-center align-items-center">
            
             <div class="col-md-5 text-center">
-                <!-- <img src="<?php echo get_field('fdfd_image'); ?>" style="height:auto;"> -->
                 <img class="im-fluid w-75" style=""
                 src="<?php  echo get_stylesheet_directory_uri() . '/assets/img/Afbeelding-opleiding-workplace-management.001.png' ?>">    
             </div>
 
-            <div class="col-md-5">
+            <div class="col-md-7">
                 <h2 class="hero-title text-white">De toekomstbestendige werkomgeving vereist een integrale en hybride aanpak</h2>
                 <div class="theme-hero__content default-text text-white">
                 Wij noemen dit workplace management. Leer van de experts op het gebied van facility management, human resource management, duurzaamheid, IT, mobiliteit, vastgoed, bouw en gezondheid.
