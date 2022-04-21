@@ -44,7 +44,7 @@
             </div>
         </div>
 
-        <div class="row d-flex justify-content-center bg-accent">
+        <div class="row d-flex justify-content-center bg-accent mt-5">
             <div class="container my-5">
                 <div class="row d-flex justify-content-center">
                     <div class="mx-md-4 mx-3">
@@ -95,7 +95,7 @@
     <div class="container">
 
         <div class="row d-flex justify-content-center">
-            <div class="col-md-6 col-11 p-4 card_side" href="">
+            <div class="col-md-6 col-12 p-4 card_side" href="">
                 <div class="row d-flex bd-highlight background__lightblue rounded rounded-5 theme-card__wrapper">
                     <div class="col-md-3">
                         <img class="m-2 img_card" 
@@ -107,7 +107,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-11 p-4 card_side" href="">
+            <div class="col-md-6 col-12 p-4 card_side" href="">
                 <div class="row d-flex bd-highlight background__lightblue rounded rounded-5 theme-card__wrapper">
                     <div class="col-md-3">
                         <img class="img_card m-2" style=""
