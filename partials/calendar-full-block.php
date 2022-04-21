@@ -1,4 +1,4 @@
-<div class="theme-calendar-section">
+<div class="theme-calendar-section mx-0">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
