@@ -3,7 +3,7 @@
         <div class="row flex-column-reverse flex-md-row align-items-center">
             <div class="col-md-5 mx-auto">
                 <div class="theme-form__wrapper">
-                    <?php echo get_field('fdfd_contactcontent'); ?>
+                    <?php echo do_shortcode('[ninja_form id=4]') ?>
                 </div>
             </div>
             <div class="col-md-5">
@@ -11,7 +11,7 @@
                     <div class="text-default">
                         <?php echo get_field('fdfd_content'); ?>
                     </div>
-                </div>
+                </div>  
             </div>
         </div>
     </div>

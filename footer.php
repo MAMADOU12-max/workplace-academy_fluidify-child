@@ -8,16 +8,16 @@
             padding: 50px 20px;
         } 
     }
-    /* @media screen and (max-width: 576px) {
-        .theme-button__secondary {
-            padding: 5px 10px;
-        }
+    .strong-btn {
+        font-weight: bolder;
+        padding: 16.3px;
+        background: #00A89D;
+        border-radius: 5px;
     }
-     */
   
 </style>
 
-<footer id="footer" class="bg__grey">
+<!-- <footer id="footer" class="bg__grey">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3">
@@ -27,7 +27,6 @@
                 </section>
                 <section class="footer-area footer-area-one">			
                     <div class="textwidget">
-                        <!-- <p>Workplace Academy</p> -->
                         <p class="pt-3">info@workplaceacademy.nl</p>
                     </div>
 		        </section>            
@@ -48,6 +47,67 @@
             </div>
         </div>
     </div>
+</footer> -->
+
+
+<footer id="footer" class="bg__grey">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <section class="footer-area footer-area-one">
+                    <img width="150" height="56" src="https://workplaceacademy.nl/wp-content/uploads/2021/02/cropped-logoWorkPlaceAcademy_01-300x112.png" class="image wp-image-309  attachment-150x56 size-150x56" alt="" loading="lazy" style="max-width: 100%; height: auto;" srcset="https://workplaceacademy.nl/wp-content/uploads/2021/02/cropped-logoWorkPlaceAcademy_01-300x112.png 300w, https://workplaceacademy.nl/wp-content/uploads/2021/02/cropped-logoWorkPlaceAcademy_01.png 500w" sizes="(max-width: 150px) 100vw, 150px" />
+                </section>
+                <section class="footer-area footer-area-one">		
+                    <div class="textwidget"> 
+                        <p class="pt-4">info@workplaceacademy.nl</p>
+                    </div>
+		        </section>            
+            </div>
+
+            <div class="col-md-3 ">
+                <section class="footer-area footer-area-two">
+                    <h4>Opleidingsniveaus</h4>			
+                    <div class="textwidget"><p>
+                        <a href="/basisopleidingen/" class="text-white">Basisopleidingen</a><br />
+                        <a href="/workshops/" class="text-white">Workshops</a><br />
+                        <a href="/masterclasses/" class="text-white">Masterclasses</a></p>
+                    </div>
+		        </section>   
+            </div>
+
+            <div class="col-md-3">
+                <section class="footer-area footer-area-three"><h4>Workplace Academy</h4>		
+                	<div class="textwidget"><p>
+                        <a href="/over-ons/" class="text-white">Over ons</a><br />
+                        <a href="/incompany/" class="text-white">Incompany</a><br />
+                        <a href="/agenda/" class="text-white">Agenda</a></p>
+                    </div>
+		        </section>           
+            </div>
+
+            <div class="col-md-3">
+                <section class="footer-area footer-area-three">
+                    <h4>Meld je aan voor de nieuwsbrief</h4>		
+                    <div class="textwidget">
+                        <form class="row d-flex flex-row bd-highlight justify-content-center">
+                            <div class="col-md-12 col-sm-12 col-12 d-md-flex">
+                                <div class="p-1 bd-highlight input_aanmelden">
+                                    <input type="password" class="form-control w-100 p-4" id="inputPassword2" placeholder="Jouw e-mailadres">
+                                </div>
+                                <div class="p-1 bd-highlight btn_aanmelden">
+                                    <button type="submit" class="btn w-100 text-white" style="padding: 12px; background-color: #00A89D"> 
+                                        <strong class="strong-btn">Aanmelden</strong> 
+                                    </button>
+                                </div>
+                            </div>
+                        </form> 
+                    </div>
+		        </section>          
+            </div>
+            
+        </div>
+    </div>
+
 </footer>
 
 <?php wp_footer(); ?>

@@ -18,7 +18,6 @@ Text Domain:  fluidify-child
 .container {
   max-width: 1440px;
 }
-
 /*/ body /*/
 body {
   width: 100%;
@@ -797,8 +796,7 @@ h2 {
   border-radius: 35px 1px 1px 35px;
 }
 .theme-card__select-radio_content {
-  /* background-color: red; */
-  padding: 12px 30px;
+  padding: 12px;
 }
 .theme-card__information {
   text-align: center;
@@ -811,6 +809,9 @@ h2 {
   text-align: center;
 }
 
+.section-height_custom {
+   height: 90% !important;
+}
 /*/ theme form /*/
 .theme-form__wrapper {
   background-color: #E0EFF4;
@@ -1062,23 +1063,40 @@ ul.nav.navbar-nav.open-mobile-menu {
 .text-end-define-lg{
   text-align: end;
 }
+.input_aanmelden {
+  width: 70%;
+}
+.btn_aanmelden {
+  width: 30%;
+}
+
 @media screen and (max-width: 768px) {
-  .form-subscribe .nf-form-content nf-fields-wrap {
-    display: block;
-  }
-  .form-subscribe .nf-form-content nf-fields-wrap .nf-field .nf-field-element input[type=button] {
-    margin-left: 0px;
-  }
-  .theme-hero {
-    padding: 100px 25px 25px 25px;
-  }
-  .deborded_button {
-    right: 16px;
-  }
-  .text-center-define {
-      text-align: center;
-      /* background-color: #0B6EB9;  */
-  }
+    .form-subscribe .nf-form-content nf-fields-wrap {
+        display: block;
+    }
+    .form-subscribe .nf-form-content nf-fields-wrap .nf-field .nf-field-element input[type=button] {
+        margin-left: 0px;
+    }
+    .theme-hero {
+        padding: 100px 25px 25px 25px;
+    }
+    .deborded_button {
+        right: 16px;
+    }
+    .text-center-define {
+        text-align: center;
+        /* background-color: #0B6EB9;  */
+    }
+    .theme-card__select-radio_content {
+        padding: 12px 10px;
+    }
+    .section-height_custom {
+        height: 100% !important;
+    }
+    .input_aanmelden, .btn_aanmelden{
+        width: 100%;
+        margin: 20px 0px;
+    }
 }
 
 .footer-area img {
@@ -1216,8 +1234,43 @@ img.avatar.photo {
 }
 .img_card {
   width: 150px;
+  height: 75%;
+}
+.text-limit-section {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  /* line-height: 21px; */
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.text-limit-agenda-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.text-limit-agenda-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
+/* saparate screen custom padding left and right */
+@media screen and (min-width: 768px) and (max-width: 1500px) {
+    .theme-section {
+        padding-left: 30px;
+        padding-right: 30px;
+        /* background-color: #023356; */
+    }
+    .section-custom {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
 /*/ media queries /*/
 @media screen and (max-width: 768px) {
   .card_side {
@@ -1418,14 +1471,14 @@ img.avatar.photo {
 }
 .sousBlockFrontAgenda {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .col-md-12 .blockCardFront {
   width: 100%;
 }
 .blockCardFront {
-  width: 49%;
+  width: 41%;
   background: white;
   box-shadow: 2px 1px 13px rgb(0 0 0 / 10%);
   padding: 10px 15px;
