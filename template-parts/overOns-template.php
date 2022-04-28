@@ -12,13 +12,13 @@
         <div class="wrapper">
             <div class="theme-hero bg__lightblue">
             <div class="container">
-                <div class="row flex-column-reverse flex-md-row align-items-center py-5">
-                    <div class="col-md-6">
+                <div class="row flex-column-reverse flex-md-row align-items-center py-5 d-flex justify-content-center">
+                    <div class="col-md-5">
                         <h2 class="hero-title">Een combinatie van kennis en vaardigheden</h2>
                         <div class="theme-hero__content default-text">Wij hebben ruimschoots ervaring in de wereld van facility management, workplace management en human resource management. Heb je vragen over ontwikkelingen in dit vakgebied? Neem contact met ons op; we gaan maar al te graag het gesprek met je aan.
                     </div>
-                    <a href="https://workplaceacademy.nl/" class="btn btn-default theme-button bg__primary">Neem direct contact met ons op</a>            </div>
-                    <div class="col-md-6">
+                    <a href="#" class="btn btn-default theme-button bg__primary">Neem direct contact met ons op</a> </div>
+                    <div class="col-md-5">
                         <img src="" style="height:auto;">
                     </div>
                 </div>
@@ -59,87 +59,118 @@
 
         <div class="theme-section alt">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-lg-3 p-1">
-                        <a href="">
-                            <div class="theme-card__wrapper">
-                                <h4 class="theme-card__title">Facility Management</h4>
-                                <div class="theme-card__duration"></div>
-                                <div class="theme-card__description"></div>
+                <div class="row -flex justify-content-center">
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-3 p-1">
+                                <a href="">
+                                    <div class="theme-card__wrapper">
+                                        <h4 class="theme-card__title">Facility Management</h4>
+                                        <div class="theme-card__duration"></div>
+                                        <div class="theme-card__description"></div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="col-md-6 col-lg-3 p-1">
-                        <a href="">
-                            <div class="theme-card__wrapper">
-                                <h4 class="theme-card__title">Vastgoed en Bouw</h4>
-                                <div class="theme-card__duration"></div>
-                                <div class="theme-card__description"></div>
+                            <div class="col-md-6 col-lg-3 p-1">
+                                <a href="">
+                                    <div class="theme-card__wrapper">
+                                        <h4 class="theme-card__title">Vastgoed en Bouw</h4>
+                                        <div class="theme-card__duration"></div>
+                                        <div class="theme-card__description"></div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="col-md-6 col-lg-3 p-1">
-                        <a href="">
-                            <div class="theme-card__wrapper">
-                                <h4 class="theme-card__title">IT en Data</h4>
-                                <div class="theme-card__duration"></div>
-                                <div class="theme-card__description"></div>
+                            <div class="col-md-6 col-lg-3 p-1">
+                                <a href="">
+                                    <div class="theme-card__wrapper">
+                                        <h4 class="theme-card__title">IT en Data</h4>
+                                        <div class="theme-card__duration"></div>
+                                        <div class="theme-card__description"></div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="col-md-6 col-lg-3 p-1">
-                        <a href="">
-                            <div class="theme-card__wrapper">
-                                <h4 class="theme-card__title">Duurzaamheid</h4>
-                                <div class="theme-card__duration"></div>
-                                <div class="theme-card__description"></div>
+                            <div class="col-md-6 col-lg-3 p-1">
+                                <a href="">
+                                    <div class="theme-card__wrapper">
+                                        <h4 class="theme-card__title">Duurzaamheid</h4>
+                                        <div class="theme-card__duration"></div>
+                                        <div class="theme-card__description"></div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="col-md-6 col-lg-3 p-1">
-                        <a href="">
-                            <div class="theme-card__wrapper">
-                                <h4 class="theme-card__title">Mobiliteit</h4>
-                                <div class="theme-card__duration"></div>
-                                <div class="theme-card__description"></div>
+                            <div class="col-md-6 col-lg-3 p-1">
+                                <a href="">
+                                    <div class="theme-card__wrapper">
+                                        <h4 class="theme-card__title">Mobiliteit</h4>
+                                        <div class="theme-card__duration"></div>
+                                        <div class="theme-card__description"></div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="col-md-6 col-lg-3 p-1">
-                        <a href="">
-                            <div class="theme-card__wrapper">
-                                <h4 class="theme-card__title">Technologie</h4>
-                                <div class="theme-card__duration"></div>
-                                <div class="theme-card__description"></div>
+                            <div class="col-md-6 col-lg-3 p-1">
+                                <a href="">
+                                    <div class="theme-card__wrapper">
+                                        <h4 class="theme-card__title">Technologie</h4>
+                                        <div class="theme-card__duration"></div>
+                                        <div class="theme-card__description"></div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="col-md-6 col-lg-3 p-1">
-                        <a href="">
-                            <div class="theme-card__wrapper">
-                                <h4 class="theme-card__title">Human resources</h4>
-                                <div class="theme-card__duration"></div>
-                                <div class="theme-card__description"></div>
+                            <div class="col-md-6 col-lg-3 p-1">
+                                <a href="">
+                                    <div class="theme-card__wrapper">
+                                        <h4 class="theme-card__title">Human resources</h4>
+                                        <div class="theme-card__duration"></div>
+                                        <div class="theme-card__description"></div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="col-md-6 col-lg-3 p-1">
-                        <a href="">
-                            <div class="theme-card__wrapper">
-                                <h4 class="theme-card__title">Inrichting</h4>
-                                <div class="theme-card__duration"></div>
-                                <div class="theme-card__description"></div>
+                            <div class="col-md-6 col-lg-3 p-1">
+                                <a href="">
+                                    <div class="theme-card__wrapper">
+                                        <h4 class="theme-card__title">Inrichting</h4>
+                                        <div class="theme-card__duration"></div>
+                                        <div class="theme-card__description"></div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
+                        </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
 
 
 
-        <div class="wp-block-columns container align-items-center">
-            <div class="wp-block-column">
+        <div class="theme-section alt mt-5">
+            <div class="container">
+                <div class="row -flex justify-content-center">
+                    <div class="col-md-10">
+                        <div class="row align-items-center">
+                            <div class="col-md-6 p-1">
+                                <div class="wp-block-column">
+                                    <h2>De initiatiefnemers</h2>
+                                    <p>Het bestuur van de WorkPlace Academy bestaat uit Wim Kooyman, Wietse Walinga en Daniël van der Kolk. De dagelijkse leiding is in handen van Daniël en samen met experts zorgt hij voor de samenstelling van het programma en activiteiten</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 p-1 flex-column-reverse">
+                                <div class="wp-block-column">
+                                    <figure class="wp-block-image size-large"><img loading="lazy" width="611" height="619" src="https://workplaceacademy.nl/wp-content/uploads/2021/02/de-directie.png" alt="" class="wp-image-204" srcset="https://workplaceacademy.nl/wp-content/uploads/2021/02/de-directie.png 611w, https://workplaceacademy.nl/wp-content/uploads/2021/02/de-directie-296x300.png 296w" sizes="(max-width: 611px) 100vw, 611px" /></figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- <div class="wp-block-columns container align-items-center">
+            <div class="wp-block-column ">
                 <h2>De initiatiefnemers</h2>
                 <p>Het bestuur van de WorkPlace Academy bestaat uit Wim Kooyman, Wietse Walinga en Daniël van der Kolk. De dagelijkse leiding is in handen van Daniël en samen met experts zorgt hij voor de samenstelling van het programma en activiteiten</p>
             </div>
@@ -147,13 +178,13 @@
             <div class="wp-block-column flex-column-reverse">
                 <figure class="wp-block-image size-large"><img loading="lazy" width="611" height="619" src="https://workplaceacademy.nl/wp-content/uploads/2021/02/de-directie.png" alt="" class="wp-image-204" srcset="https://workplaceacademy.nl/wp-content/uploads/2021/02/de-directie.png 611w, https://workplaceacademy.nl/wp-content/uploads/2021/02/de-directie-296x300.png 296w" sizes="(max-width: 611px) 100vw, 611px" /></figure>
             </div>
-        </div>
+        </div> -->
 
 
 <div class="theme-blurb bg__lightblue">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 text-center">
                 <h4>De expert(s)</h4>
             </div>
         </div>
