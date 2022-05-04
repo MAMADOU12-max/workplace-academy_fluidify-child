@@ -22,7 +22,7 @@
     </div>
 </div>
 
-<div class="theme-section bg__lightblue">
+<div class="theme-section">
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="col-md-10">

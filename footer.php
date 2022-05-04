@@ -89,18 +89,7 @@
                 <section class="footer-area footer-area-three">
                     <h4>Meld je aan voor de nieuwsbrief</h4>		
                     <div class="textwidget">
-                        <form class="row d-flex flex-row bd-highlight justify-content-center">
-                            <div class="col-md-12 col-sm-12 col-12 d-md-flex">
-                                <div class="p-1 bd-highlight input_aanmelden">
-                                    <input type="password" class="form-control w-100 p-4" id="inputPassword2" placeholder="Jouw e-mailadres">
-                                </div>
-                                <div class="p-1 bd-highlight btn_aanmelden">
-                                    <button type="submit" class="btn w-100 text-white" style="padding: 12px; background-color: #00A89D"> 
-                                        <strong class="strong-btn">Aanmelden</strong> 
-                                    </button>
-                                </div>
-                            </div>
-                        </form> 
+                        <?php echo do_shortcode('[ninja_form id=11]') ?>
                     </div>
 		        </section>          
             </div>

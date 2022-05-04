@@ -23,21 +23,29 @@
 <!-- click cdn css -->
 <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
 
+<style>
+    .text-size-cards {
+  /* color: #023356; */
+    font-size: 14px;
+}
+</style>
 <head>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 </head>
+
+
 <div class="theme-section alt pt-0">
-    <div class="container">
+    <div class="container" id="cards_section">
     <!-- slider_slick -->
-        <div class="row bg-white bg-info d-flex justify-content-center ">
+        <div class="row bg-white bg-info d-flex justify-content-center " >
 
             <div class="col-md-10">
-                <div class="row">
+                <div class="row" >
 
                     <div class="col-md-12 text-center  slider_slick px-0">
 
-                        <div class="col-md-6 col-lg-3 p-1 items-slider-card bg-light">
+                        <div class="col-md-6 col-lg-3 p-1 items-slider-card ">
                             <a href="/workshop/opleiding/">
                                 <div class="theme-card__wrapper">
                                     <h4 class="theme-card__title">Opleiding</h4>
@@ -64,35 +72,35 @@
                                                 <img class="im-fluid" style=""
                                                 src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Theorie_en_praktijk.png' ?>">  
                                             </span> 
-                                            <span class="text-point" style="margin-top: 5px;">Theorie en praktijk </span>
+                                            <span class="text-size-cards" style="margin-top: 5px; color: #023356">Theorie en praktijk </span>
                                         </div>
                                         <div class="d-flex align-items-center py-1">
                                             <span class="mx-2" style="width: 23px" >
                                                 <img class="im-fluid" style=""
                                                 src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Theorie_en_praktijk.png' ?>">  
                                             </span> 
-                                            <span class="text-point" style="margin-top: 5px;"> Meerdere experts </span>
+                                            <span class="text-size-cards" style="margin-top: 5px;  color: #023356"> Meerdere experts </span>
                                         </div>
                                         <div class="d-flex align-items-center py-1">
                                             <span class="mx-2" style="width: 23px" >
                                                 <img class="im-fluid" style=""
                                                 src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Integrale_benadering.png' ?>">  
                                             </span> 
-                                            <span class="text-point" style="margin-top: 5px;"> Integrale benadering  </span>
+                                            <span class="text-size-cards" style="margin-top: 5px;  color: #023356"> Integrale benadering  </span>
                                         </div>
                                         <div class="d-flex align-items-center py-1">
                                             <span class="mx-2" style="width: 23px" >
                                                 <img class="im-fluid" style=""
                                                 src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Inspirerende_locaties.png' ?>">  
                                             </span> 
-                                            <span class="text-point" style="margin-top: 5px;"> Inspirerende locaties</span>
+                                            <span class="text-size-cards" style="margin-top: 5px;  color: #023356"> Inspirerende locaties</span>
                                         </div>
                                         <div class="d-flex align-items-center py-1">
                                             <span class="mx-2" style="width: 23px" >
                                                 <img class="im-fluid" style=""
                                                 src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Exclusieve_groep.png' ?>">  
                                             </span> 
-                                            <span class="text-point" style="margin-top: 5px;"> Exclusieve groep</span>
+                                            <span class="text-size-cards" style="margin-top: 5px;  color: #023356"> Exclusieve groep</span>
                                         </div>
                                         
                                     </div>
@@ -105,7 +113,7 @@
                             </a>
                         </div>
 
-                        <div class="col-md-6 col-lg-3 p-1 items-slider-card bg-light">
+                        <div class="col-md-6 col-lg-3 p-1 items-slider-card ">
                             <a href="/masterclasses/">
                                 <div class="theme-card__wrapper">
                                     <h4 class="theme-card__title">Masterclasses</h4>
@@ -124,35 +132,35 @@
                                                 <img class="im-fluid" style=""
                                                 src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Theorie_en_praktijk.png' ?>">  
                                             </span> 
-                                            <span class="text-point text-dark" style="margin-top: 5px;"> Experts uit de markt </span>
+                                            <span class="text-size-cards" style="margin-top: 5px;  color: #023356"> Experts uit de markt </span>
                                         </div>
                                         <div class="d-flex align-items-center py-1">
                                             <span class="mx-2" style="width: 23px" >
                                                 <img class="im-fluid" style=""
                                                 src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Theorie_en_praktijk.png' ?>">  
                                             </span> 
-                                            <span class="text-point text-dark" style="margin-top: 5px;"> Hedendaagse thema's </span>
+                                            <span class="text-size-cards" style="margin-top: 5px;  color: #023356"> Hedendaagse thema's </span>
                                         </div>
                                         <div class="d-flex align-items-center py-1">
                                             <span class="mx-2" style="width: 23px" >
                                                 <img class="im-fluid" style=""
                                                 src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Inclusief_lunch_en_koffie.png' ?>">  
                                             </span> 
-                                            <span class="text-point text-dark" style="margin-top: 5px;"> Inclusief lunch en koffie </span>
+                                            <span class="text-size-cards" style="margin-top: 5px;  color: #023356"> Inclusief lunch en koffie </span>
                                         </div>
                                         <div class="d-flex align-items-center py-1">
                                             <span class="mx-2" style="width: 23px" >
                                                 <img class="im-fluid" style=""
                                                 src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Theorie_en_praktijk.png' ?>">  
                                             </span> 
-                                            <span class="text-point text-dark" style="margin-top: 5px;"> Netwerken </span>
+                                            <span class="text-size-cards" style="margin-top: 5px;  color: #023356"> Netwerken </span>
                                         </div>
                                         <div class="d-flex align-items-center py-1">
                                             <span class="mx-2" style="width: 23px" >
                                                 <img class="im-fluid" style=""
                                                 src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Exclusieve_groep.png' ?>">  
                                             </span> 
-                                            <span class="text-point text-dark" style="margin-top: 5px;"> Exclusieve groep </span>
+                                            <span class="text-size-cards" style="margin-top: 5px;  color: #023356"> Exclusieve groep </span>
                                         </div>
                                     </div>
 
@@ -163,7 +171,7 @@
                             </a>
                         </div>
 
-                        <div class="col-md-6 col-lg-3 p-1 items-slider-card bg-light">
+                        <div class="col-md-6 col-lg-3 p-1 items-slider-card ">
                             <a href="/workshops/">
                                 <div class="theme-card__wrapper">
                                     <h4 class="theme-card__title">Workshops</h4>
@@ -182,35 +190,35 @@
                                                 <img class="im-fluid" style=""
                                                 src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Blijven_ontwikkelen.png' ?>">  
                                             </span> 
-                                            <span class="text-point text-dark" style="margin-top: 5px;"> Blijven ontwikkelen </span>
+                                            <span class="text-size-cards" style="margin-top: 5px;  color: #023356"> Blijven ontwikkelen </span>
                                         </div>
                                         <div class="d-flex align-items-center py-1">
                                             <span class="mx-2" style="width: 23px" >
                                                 <img class="im-fluid" style=""
                                                 src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Gerichte_onderwerpen.png' ?>">  
                                             </span> 
-                                            <span class="text-point text-dark" style="margin-top: 5px;"> Gerichte onderwerpen </span>
+                                            <span class="text-size-cards" style="margin-top: 5px;  color: #023356"> Gerichte onderwerpen </span>
                                         </div>
                                         <div class="d-flex align-items-center py-1">
                                             <span class="mx-2" style="width: 23px" >
                                                 <img class="im-fluid" style=""
                                                 src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Theorie_en_praktijk.png' ?>">  
                                             </span> 
-                                            <span class="text-point text-dark" style="margin-top: 5px;"> Netwerken </span>
+                                            <span class="text-size-cards" style="margin-top: 5px;  color: #023356"> Netwerken </span>
                                         </div>
                                         <div class="d-flex align-items-center py-1">
                                             <span class="mx-2" style="width: 23px" >
                                                 <img class="im-fluid" style=""
                                                 src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Inspirerende_locaties.png' ?>">  
                                             </span> 
-                                            <span class="text-point text-dark" style="margin-top: 5px;"> Inspirerende locaties </span>
+                                            <span class="text-size-cards" style="margin-top: 5px;  color: #023356"> Inspirerende locaties </span>
                                         </div>
                                         <div class="d-flex align-items-center py-1">
                                             <span class="mx-2" style="width: 23px" >
                                                 <img class="im-fluid" style=""
                                                 src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Exclusieve_groep.png' ?>">  
                                             </span> 
-                                            <span class="text-point text-dark" style="margin-top: 5px;"> Exclusieve groep </span>
+                                            <span class="text-size-cards" style="margin-top: 5px;  color: #023356"> Exclusieve groep </span>
                                         </div>
                                     </div>
 
@@ -221,7 +229,7 @@
                             </a>
                         </div>
 
-                        <div class="col-md-6 col-lg-3 p-1 items-slider-card bg-light">
+                        <div class="col-md-6 col-lg-3 p-1 items-slider-card ">
                             <a href="/incompany/">
                                 <div class="theme-card__wrapper">
                                     <h4 class="theme-card__title">Events</h4>
@@ -240,35 +248,35 @@
                                                 <img class="im-fluid" style=""
                                                 src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/van_prive_sessies.png' ?>">  
                                             </span> 
-                                            <span class="text-point text-dark" style="margin-top: 5px;"> Van privé sessies </span>
+                                            <span class="text-size-cards" style="margin-top: 5px;  color: #023356"> Van privé sessies </span>
                                         </div>
                                         <div class="d-flex align-items-center py-1">
                                             <span class="mx-2" style="width: 23px" >
                                                 <img class="im-fluid" style=""
                                                 src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Tot_beurs__Congres.png' ?>">  
                                             </span> 
-                                            <span class="text-point text-dark" style="margin-top: 5px;"> Tot beurs / congres </span>
+                                            <span class="text-size-cards" style="margin-top: 5px;  color: #023356"> Tot beurs / congres </span>
                                         </div>
                                         <div class="d-flex align-items-center py-1">
                                             <span class="mx-2" style="width: 23px" >
                                                 <img class="im-fluid" style=""
                                                 src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Unieke_ervaring.png' ?>">  
                                             </span> 
-                                            <span class="text-point text-dark" style="margin-top: 5px;"> Unieke ervaringen </span>
+                                            <span class="text-size-cards" style="margin-top: 5px;  color: #023356"> Unieke ervaringen </span>
                                         </div>
                                         <div class="d-flex align-items-center py-1">
                                             <span class="mx-2" style="width: 23px" >
                                                 <img class="im-fluid" style=""
                                                 src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Inspirerende_locaties.png' ?>">  
                                             </span> 
-                                            <span class="text-point text-dark" style="margin-top: 5px;"> Inspirerende locaties </span>
+                                            <span class="text-size-cards" style="margin-top: 5px;  color: #023356"> Inspirerende locaties </span>
                                         </div>
                                         <div class="d-flex align-items-center py-1">
                                             <span class="mx-2" style="width: 23px" >
                                                 <img class="im-fluid" style=""
                                                 src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Theorie_en_praktijk.png' ?>">  
                                             </span> 
-                                            <span class="text-point text-dark" style="margin-top: 5px;"> Netwerken </span>
+                                            <span class="text-size-cards" style="margin-top: 5px;  color: #023356"> Netwerken </span>
                                         </div>
                                     </div>
 
@@ -309,7 +317,7 @@
                         ><?php echo $card['fdfd_card_content']; ?></div>
 
                         <button type="button" class="btn background__secondary text-white w-100 mt-3">
-                           <strong>Neem Contact</strong>  
+                           <strong>Lees meer</strong>  
                         </button>
 
                     </div>
@@ -333,10 +341,10 @@
                         </div>
 
                         <div class="theme-card__duration" style="text-align:start"
-                        ><?php echo $card['fdfd_card_content']; ?></div>
+                        >Individuele begeleiding om er voor te zorgen dat jij een glansrijke carrière doorloopt</div>
                         
                         <button type="button" class="btn background__secondary text-white w-100 mt-3">
-                           <strong>Neem Contact</strong>  
+                           <strong>Lees meer</strong>  
                         </button>
                     </div>
                 </a>
@@ -349,6 +357,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- slick cdn Js -->
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 <script type="text/javascript">
 
     $('.slider_slick').slick({
@@ -359,7 +368,7 @@
         arrows: false,
         responsive: [
             {
-                breakpoint: 1400,
+                breakpoint: 1410,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,

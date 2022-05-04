@@ -795,6 +795,9 @@ h2 {
   background-color: #E89937;
   border-radius: 35px 1px 1px 35px;
 }
+/* .text-size-cards {
+    font-size: 13px;
+} */
 .theme-card__select-radio_content {
   padding: 12px;
 }
@@ -1563,7 +1566,8 @@ img.avatar.photo {
 }
 .platformText {
   font-size: 13px;
-  color: #707070;
+  /* color: #707070; */
+  color: #000;
   margin-bottom: 6px;
 }
 .sousBlockFrontProdcut .blockCardFront .deToekomstBlock .detaiElementAgenda .janBlock .textJan {
