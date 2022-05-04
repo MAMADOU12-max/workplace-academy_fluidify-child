@@ -18,8 +18,9 @@
                         <div class="theme-hero__content default-text">Wij hebben ruimschoots ervaring in de wereld van facility management, workplace management en human resource management. Heb je vragen over ontwikkelingen in dit vakgebied? Neem contact met ons op; we gaan maar al te graag het gesprek met je aan.
                     </div>
                     <a href="#" class="btn btn-default theme-button bg__primary">Neem direct contact met ons op</a> </div>
-                    <div class="col-md-5">
-                        <img src="" style="height:auto;">
+                    <div class="col-md-5 text-end-define-lg text-center-define">
+                        <img class="im-fluid w-75" style=""
+                            src="<?php  echo get_stylesheet_directory_uri() . '/assets/img/Contact_team.jpeg' ?>">  
                     </div>
                 </div>
             </div>
@@ -57,90 +58,96 @@
             </div>
         </div>
 
-        <div class="theme-section alt">
+
+        <!-- ---------------------------------------------------------------- start cards section ------------------------------------------------------------- -->
+        <div class="theme-section pt-1">
             <div class="container">
-                <div class="row -flex justify-content-center">
-                    <div class="col-md-10">
+
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-10 mt-3">
                         <div class="row">
-                            <div class="col-md-6 col-lg-3 p-1">
-                                <a href="">
-                                    <div class="theme-card__wrapper">
-                                        <h4 class="theme-card__title">Facility Management</h4>
-                                        <div class="theme-card__duration"></div>
-                                        <div class="theme-card__description"></div>
+                            <div class="col-md-6 col-lg-3 col-6 p-1" style="height: 230px;">
+                                <a>
+                                    <div class="theme-card__wrapper text-center py-4 pt-5">
+                                        <img class="img-fluid" style="max-width: 85px;"
+                                        src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Facilitair.png' ?>">    
+                                        <h4 class="theme-card__title mt-2 mb-0">Facilitair</h4>
                                     </div>
-                                </a>
+                                </a> 
                             </div>
-                            <div class="col-md-6 col-lg-3 p-1">
-                                <a href="">
-                                    <div class="theme-card__wrapper">
-                                        <h4 class="theme-card__title">Vastgoed en Bouw</h4>
-                                        <div class="theme-card__duration"></div>
-                                        <div class="theme-card__description"></div>
+                            <div class="col-md-6 col-lg-3 col-6 p-1" style="height: 230px;">
+                                <a>
+                                    <div class="theme-card__wrapper text-center py-4 pt-5">
+                                        <img class="img-fluid" style="max-width: 85px;"
+                                        src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/HR.png' ?>">    
+                                        <h4 class="theme-card__title mt-2 mb-0">HR</h4>
                                     </div>
-                                </a>
+                                </a> 
                             </div>
-                            <div class="col-md-6 col-lg-3 p-1">
-                                <a href="">
-                                    <div class="theme-card__wrapper">
-                                        <h4 class="theme-card__title">IT en Data</h4>
-                                        <div class="theme-card__duration"></div>
-                                        <div class="theme-card__description"></div>
+                            <div class="col-md-6 col-lg-3 col-6 p-1" style="height: 230px;">
+                                <a>
+                                    <div class="theme-card__wrapper text-center py-4 pt-5">
+                                        <img class="img-fluid" style="max-width: 85px;"
+                                        src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Real_Estate.png' ?>">    
+                                        <h4 class="theme-card__title mt-2 mb-0">Real Estate</h4>
                                     </div>
-                                </a>
+                                </a> 
                             </div>
-                            <div class="col-md-6 col-lg-3 p-1">
-                                <a href="">
-                                    <div class="theme-card__wrapper">
-                                        <h4 class="theme-card__title">Duurzaamheid</h4>
-                                        <div class="theme-card__duration"></div>
-                                        <div class="theme-card__description"></div>
+                            <div class="col-md-6 col-lg-3 col-6 p-1" style="height: 230px;">
+                                <a>
+                                    <div class="theme-card__wrapper text-center py-4 pt-5">
+                                        <img class="img-fluid" style="max-width: 85px;"
+                                        src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/IT.png' ?>">    
+                                        <h4 class="theme-card__title mt-2 mb-0">IT</h4>
                                     </div>
-                                </a>
+                                </a> 
                             </div>
-                            <div class="col-md-6 col-lg-3 p-1">
-                                <a href="">
-                                    <div class="theme-card__wrapper">
-                                        <h4 class="theme-card__title">Mobiliteit</h4>
-                                        <div class="theme-card__duration"></div>
-                                        <div class="theme-card__description"></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 col-lg-3 col-6 p-1" style="height: 230px;">
+                                <a>
+                                    <div class="theme-card__wrapper text-center py-4 pt-5">
+                                        <img class="img-fluid" style="max-width: 85px;"
+                                        src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/mobiliteit.png' ?>">    
+                                        <h4 class="theme-card__title mt-2 mb-0">Mobiliteit</h4>
                                     </div>
-                                </a>
+                                </a> 
                             </div>
-                            <div class="col-md-6 col-lg-3 p-1">
-                                <a href="">
-                                    <div class="theme-card__wrapper">
-                                        <h4 class="theme-card__title">Technologie</h4>
-                                        <div class="theme-card__duration"></div>
-                                        <div class="theme-card__description"></div>
+                            <div class="col-md-6 col-lg-3 col-6 p-1" style="height: 230px;">
+                                <a>
+                                    <div class="theme-card__wrapper text-center py-4 pt-5">
+                                        <img class="img-fluid" style="max-width: 85px;"
+                                        src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Duurzaamheid.png' ?>">    
+                                        <h4 class="theme-card__title mt-2 mb-0">Duurzaamheid</h4>
                                     </div>
-                                </a>
+                                </a> 
                             </div>
-                            <div class="col-md-6 col-lg-3 p-1">
-                                <a href="">
-                                    <div class="theme-card__wrapper">
-                                        <h4 class="theme-card__title">Human resources</h4>
-                                        <div class="theme-card__duration"></div>
-                                        <div class="theme-card__description"></div>
+                            <div class="col-md-6 col-lg-3 col-6 p-1" style="height: 230px;">
+                                <a>
+                                    <div class="theme-card__wrapper text-center py-4 pt-5">
+                                        <img class="img-fluid" style="max-width: 85px;"
+                                        src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Adviseurs.png' ?>">    
+                                        <h4 class="theme-card__title mt-2 mb-0">Adviseurs</h4>
                                     </div>
-                                </a>
+                                </a> 
                             </div>
-                            <div class="col-md-6 col-lg-3 p-1">
-                                <a href="">
-                                    <div class="theme-card__wrapper">
-                                        <h4 class="theme-card__title">Inrichting</h4>
-                                        <div class="theme-card__duration"></div>
-                                        <div class="theme-card__description"></div>
+                            <div class="col-md-6 col-lg-3 col-6 p-1" style="height: 230px;">
+                                <a>
+                                    <div class="theme-card__wrapper text-center py-4 pt-5">
+                                        <img class="img-fluid" style="max-width: 85px;"
+                                        src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Leveranciers.png' ?>">    
+                                        <h4 class="theme-card__title mt-2 mb-0">Leveranciers</h4>
                                     </div>
-                                </a>
+                                </a> 
                             </div>
                         </div>
                     </div>
-                    
-                </div>
+                </div> 
+
             </div>
         </div>
-
+        <!-- ----------------------------------------------------------------- end cards section -------------------------------------------------------------- -->
 
 
         <div class="theme-section alt mt-5">
@@ -181,125 +188,231 @@
         </div> -->
 
 
-<div class="theme-blurb bg__lightblue">
-    <div class="container-fluid">
+<div class="theme-section bg__lightblue">
+    <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
                 <h4>De expert(s)</h4>
             </div>
         </div>
         
-<div class="row">
-    <div class="col-12">
-        <div class="theme-blurb__slick__slider">
-                        <div class="theme-blurb__slide-wrapper"> <!-- slide item -->
-                <div class="col-md">
-                    <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2022/02/Jan-Klein-Goldewijk.jpeg"></div>
-                    <div class="theme-blurb__title">Jan Klein Goldewijk</div>
-                    <div class="theme-blurb__description">Manager Facility Services &#038; Real Estate bij Essent</div>
-                    <div class="theme-blurb__icons">
-                        <a href="https://nl.linkedin.com/in/jankleingoldewijk" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+        <div class="row d-flex justify-content-center">
+            <div class="col-12 col-md-10">
+                <div class="theme-blurb__slick__slider">
+                    <div class="theme-blurb__slide-wrapper"> <!-- slide item -->
+                        <div class="col-md">
+                            <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2022/02/Jan-Klein-Goldewijk.jpeg"></div>
+                            <div class="theme-blurb__title">Jan Klein Goldewijk</div>
+                            <div class="theme-blurb__description">Manager Facility Services &#038; Real Estate bij Essent</div>
+                            <div class="theme-blurb__icons">
+                                <a href="https://nl.linkedin.com/in/jankleingoldewijk" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="theme-blurb__slide-wrapper"> <!-- slide item -->
+                        <div class="col-md">
+                            <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2022/02/Roelof-van-der-Kooi.jpeg"></div>
+                            <div class="theme-blurb__title">Roelof van der Kooi</div>
+                            <div class="theme-blurb__description">Hoofd Facilitair Bedrijf bij het Van Gogh Museum</div>
+                            <div class="theme-blurb__icons">
+                                <a href="https://nl.linkedin.com/in/roelofvanderkooi" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="theme-blurb__slide-wrapper"> <!-- slide item -->
+                        <div class="col-md">
+                            <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2022/02/Marc-Kooij.jpeg"></div>
+                            <div class="theme-blurb__title">Marc Kooij</div>
+                            <div class="theme-blurb__description">Senior Business Development Manager SPIE</div>
+                            <div class="theme-blurb__icons">
+                                <a href="https://nl.linkedin.com/in/marckooijeindhoven" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="theme-blurb__slide-wrapper"> <!-- slide item -->
+                        <div class="col-md">
+                            <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2021/09/F.-Zilte-C__DSC1891.jpg"></div>
+                            <div class="theme-blurb__title">Babs van der Zon</div>
+                            <div class="theme-blurb__description">Co-Founder SUB</div>
+                            <div class="theme-blurb__icons">
+                                <a href="https://nl.linkedin.com/in/babs-mammen-van-der-zon-6593946" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="theme-blurb__slide-wrapper"> <!-- slide item -->
+                        <div class="col-md">
+                            <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2021/09/Marc-Jutte.png"></div>
+                            <div class="theme-blurb__title">Marc Jutte</div>
+                            <div class="theme-blurb__description">Eigenaar Instatera</div>
+                            <div class="theme-blurb__icons">
+                                <a href="https://nl.linkedin.com/in/marcjutte" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="theme-blurb__slide-wrapper"> <!-- slide item -->
+                        <div class="col-md">
+                            <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2021/06/Bas-van-doeleb.jpeg"></div>
+                            <div class="theme-blurb__title">Bas van Doelen</div>
+                            <div class="theme-blurb__description">Consultant Working Conditions and Healthy Work</div>
+                            <div class="theme-blurb__icons">
+                                <a href="https://www.linkedin.com/in/bas-van-der-doelen-1a0b606/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="theme-blurb__slide-wrapper"> <!-- slide item -->
+                        <div class="col-md">
+                            <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2021/06/Jack-Stuifbergen-Breedweer-foto-LinkedIn-300x300-1.jpeg"></div>
+                            <div class="theme-blurb__title">Jack Stuifbergen</div>
+                            <div class="theme-blurb__description">Directeur Breedweer</div>
+                            <div class="theme-blurb__icons">
+                                <a href="https://nl.linkedin.com/in/jackstuifbergen" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="theme-blurb__slide-wrapper"> <!-- slide item -->
+                        <div class="col-md">
+                            <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2021/06/jeroen-Zonneveld.jpeg"></div>
+                            <div class="theme-blurb__title">Jeroen Zonneveld</div>
+                            <div class="theme-blurb__description">Co-founder SUB</div>
+                            <div class="theme-blurb__icons">
+                                <a href="https://nl.linkedin.com/in/jeroen-zonneveld-a120791b" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="theme-blurb__slide-wrapper"> <!-- slide item -->
+                        <div class="col-md">
+                            <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2021/03/Michel-Pan.jpeg"></div>
+                            <div class="theme-blurb__title">Michel Pan</div>
+                            <div class="theme-blurb__description">Business strategy bij D&#038;B The Facility Group</div>
+                            <div class="theme-blurb__icons">
+                                <a href="https://www.linkedin.com/in/michel-pan/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="theme-blurb__slide-wrapper"> <!-- slide item -->
+                        <div class="col-md">
+                            <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2021/03/Ilya-Devèrs.jpeg"></div>
+                            <div class="theme-blurb__title">Ilya Devèrs</div>
+                            <div class="theme-blurb__description">Oprichter Work &#038; People Analytics</div>
+                            <div class="theme-blurb__icons">
+                                <a href="https://www.linkedin.com/in/theilya/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-                        <div class="theme-blurb__slide-wrapper"> <!-- slide item -->
-                <div class="col-md">
-                    <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2022/02/Roelof-van-der-Kooi.jpeg"></div>
-                    <div class="theme-blurb__title">Roelof van der Kooi</div>
-                    <div class="theme-blurb__description">Hoofd Facilitair Bedrijf bij het Van Gogh Museum</div>
-                    <div class="theme-blurb__icons">
-                        <a href="https://nl.linkedin.com/in/roelofvanderkooi" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-                    </div>
-                </div>
-            </div>
-                        <div class="theme-blurb__slide-wrapper"> <!-- slide item -->
-                <div class="col-md">
-                    <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2022/02/Marc-Kooij.jpeg"></div>
-                    <div class="theme-blurb__title">Marc Kooij</div>
-                    <div class="theme-blurb__description">Senior Business Development Manager SPIE</div>
-                    <div class="theme-blurb__icons">
-                        <a href="https://nl.linkedin.com/in/marckooijeindhoven" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-                    </div>
-                </div>
-            </div>
-                        <div class="theme-blurb__slide-wrapper"> <!-- slide item -->
-                <div class="col-md">
-                    <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2021/09/F.-Zilte-C__DSC1891.jpg"></div>
-                    <div class="theme-blurb__title">Babs van der Zon</div>
-                    <div class="theme-blurb__description">Co-Founder SUB</div>
-                    <div class="theme-blurb__icons">
-                        <a href="https://nl.linkedin.com/in/babs-mammen-van-der-zon-6593946" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-                    </div>
-                </div>
-            </div>
-                        <div class="theme-blurb__slide-wrapper"> <!-- slide item -->
-                <div class="col-md">
-                    <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2021/09/Marc-Jutte.png"></div>
-                    <div class="theme-blurb__title">Marc Jutte</div>
-                    <div class="theme-blurb__description">Eigenaar Instatera</div>
-                    <div class="theme-blurb__icons">
-                        <a href="https://nl.linkedin.com/in/marcjutte" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-                    </div>
-                </div>
-            </div>
-                        <div class="theme-blurb__slide-wrapper"> <!-- slide item -->
-                <div class="col-md">
-                    <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2021/06/Bas-van-doeleb.jpeg"></div>
-                    <div class="theme-blurb__title">Bas van Doelen</div>
-                    <div class="theme-blurb__description">Consultant Working Conditions and Healthy Work</div>
-                    <div class="theme-blurb__icons">
-                        <a href="https://www.linkedin.com/in/bas-van-der-doelen-1a0b606/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-                    </div>
-                </div>
-            </div>
-                        <div class="theme-blurb__slide-wrapper"> <!-- slide item -->
-                <div class="col-md">
-                    <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2021/06/Jack-Stuifbergen-Breedweer-foto-LinkedIn-300x300-1.jpeg"></div>
-                    <div class="theme-blurb__title">Jack Stuifbergen</div>
-                    <div class="theme-blurb__description">Directeur Breedweer</div>
-                    <div class="theme-blurb__icons">
-                        <a href="https://nl.linkedin.com/in/jackstuifbergen" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-                    </div>
-                </div>
-            </div>
-                        <div class="theme-blurb__slide-wrapper"> <!-- slide item -->
-                <div class="col-md">
-                    <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2021/06/jeroen-Zonneveld.jpeg"></div>
-                    <div class="theme-blurb__title">Jeroen Zonneveld</div>
-                    <div class="theme-blurb__description">Co-founder SUB</div>
-                    <div class="theme-blurb__icons">
-                        <a href="https://nl.linkedin.com/in/jeroen-zonneveld-a120791b" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-                    </div>
-                </div>
-            </div>
-                        <div class="theme-blurb__slide-wrapper"> <!-- slide item -->
-                <div class="col-md">
-                    <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2021/03/Michel-Pan.jpeg"></div>
-                    <div class="theme-blurb__title">Michel Pan</div>
-                    <div class="theme-blurb__description">Business strategy bij D&#038;B The Facility Group</div>
-                    <div class="theme-blurb__icons">
-                        <a href="https://www.linkedin.com/in/michel-pan/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-                    </div>
-                </div>
-            </div>
-                        <div class="theme-blurb__slide-wrapper"> <!-- slide item -->
-                <div class="col-md">
-                    <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2021/03/Ilya-Devèrs.jpeg"></div>
-                    <div class="theme-blurb__title">Ilya Devèrs</div>
-                    <div class="theme-blurb__description">Oprichter Work &#038; People Analytics</div>
-                    <div class="theme-blurb__icons">
-                        <a href="https://www.linkedin.com/in/theilya/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-                    </div>
-                </div>
-            </div>
-                    </div>
+        </div>     
     </div>
-</div>    </div>
 </div>
+
+
+    <!-- 
+    <div class="theme-section alt pt-0">
+        <div class="container" id="cards_section">
+            <div class="row bg-white bg-info d-flex justify-content-center " >
+
+                <div class="col-md-10">
+                    <div class="row" >
+
+                        <div class="col-md-12 text-center  slider_slick px-0">
+
+                            <div class="col-md-6 col-lg-3 p-1 items-slider-card ">
+                                <div class="col-md">
+                                    <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2022/02/Roelof-van-der-Kooi.jpeg"></div>
+                                    <div class="theme-blurb__title">Roelof van der Kooi</div>
+                                    <div class="theme-blurb__description">Hoofd Facilitair Bedrijf bij het Van Gogh Museum</div>
+                                    <div class="theme-blurb__icons">
+                                        <a href="https://nl.linkedin.com/in/roelofvanderkooi" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-lg-3 p-1 items-slider-card ">
+                                <div class="col-md">
+                                    <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2022/02/Roelof-van-der-Kooi.jpeg"></div>
+                                    <div class="theme-blurb__title">Roelof van der Kooi</div>
+                                    <div class="theme-blurb__description">Hoofd Facilitair Bedrijf bij het Van Gogh Museum</div>
+                                    <div class="theme-blurb__icons">
+                                        <a href="https://nl.linkedin.com/in/roelofvanderkooi" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3 p-1 items-slider-card ">
+                                <div class="col-md">
+                                    <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2022/02/Roelof-van-der-Kooi.jpeg"></div>
+                                    <div class="theme-blurb__title">Roelof van der Kooi</div>
+                                    <div class="theme-blurb__description">Hoofd Facilitair Bedrijf bij het Van Gogh Museum</div>
+                                    <div class="theme-blurb__icons">
+                                        <a href="https://nl.linkedin.com/in/roelofvanderkooi" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3 p-1 items-slider-card ">
+                                <div class="col-md">
+                                    <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2022/02/Roelof-van-der-Kooi.jpeg"></div>
+                                    <div class="theme-blurb__title">Roelof van der Kooi</div>
+                                    <div class="theme-blurb__description">Hoofd Facilitair Bedrijf bij het Van Gogh Museum</div>
+                                    <div class="theme-blurb__icons">
+                                        <a href="https://nl.linkedin.com/in/roelofvanderkooi" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3 p-1 items-slider-card ">
+                                <div class="col-md">
+                                    <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2022/02/Roelof-van-der-Kooi.jpeg"></div>
+                                    <div class="theme-blurb__title">Roelof van der Kooi</div>
+                                    <div class="theme-blurb__description">Hoofd Facilitair Bedrijf bij het Van Gogh Museum</div>
+                                    <div class="theme-blurb__icons">
+                                        <a href="https://nl.linkedin.com/in/roelofvanderkooi" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3 p-1 items-slider-card ">
+                                <div class="col-md">
+                                    <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2022/02/Roelof-van-der-Kooi.jpeg"></div>
+                                    <div class="theme-blurb__title">Roelof van der Kooi</div>
+                                    <div class="theme-blurb__description">Hoofd Facilitair Bedrijf bij het Van Gogh Museum</div>
+                                    <div class="theme-blurb__icons">
+                                        <a href="https://nl.linkedin.com/in/roelofvanderkooi" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3 p-1 items-slider-card ">
+                                <div class="col-md">
+                                    <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2022/02/Roelof-van-der-Kooi.jpeg"></div>
+                                    <div class="theme-blurb__title">Roelof van der Kooi</div>
+                                    <div class="theme-blurb__description">Hoofd Facilitair Bedrijf bij het Van Gogh Museum</div>
+                                    <div class="theme-blurb__icons">
+                                        <a href="https://nl.linkedin.com/in/roelofvanderkooi" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3 p-1 items-slider-card ">
+                                <div class="col-md">
+                                    <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2022/02/Roelof-van-der-Kooi.jpeg"></div>
+                                    <div class="theme-blurb__title">Roelof van der Kooi</div>
+                                    <div class="theme-blurb__description">Hoofd Facilitair Bedrijf bij het Van Gogh Museum</div>
+                                    <div class="theme-blurb__icons">
+                                        <a href="https://nl.linkedin.com/in/roelofvanderkooi" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                
+
+            </div>
+        </div>
+    </div> -->
+
+
 
 <div class="theme-section bg__white">
     <div class="container">
-        <div class="row flex-column-reverse flex-md-row align-items-center">
+        <div class="row flex-column-reverse flex-md-row align-items-center d-flex justify-content-center">
             <div class="col-md-5 mx-auto">
                 <div class="theme-form__wrapper">
                     <h4>Bel mij terug</h4>
@@ -337,3 +450,59 @@
 <?php get_footer(); ?>
 
 </body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- slick cdn Js -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script type="text/javascript">
+
+    $('.slider_slick').slick({
+        centerMode: true,
+        centerPadding: '0px',
+        dots: false,
+        slidesToShow: 5,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 1410,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    centerPadding: '20px',
+                    arrows: false
+                }
+            },
+            // {
+            //     breakpoint: 1240,
+            //     settings: {
+            //         slidesToShow: 2,
+            //         slidesToScroll: 3,
+            //         infinite: true,
+            //         centerPadding: '20px',
+            //         arrows: false
+            //     }
+            // },
+            {
+            breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    slidesToShow: 2,
+                    centerPadding: '10px',
+                }
+            },
+            {
+            breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    slidesToShow: 1,
+                    centerPadding: '15px',
+                }
+            }
+        ]
+    });
+</script>
+	

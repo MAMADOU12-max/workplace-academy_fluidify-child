@@ -15,7 +15,7 @@
             <div class="col-md-5">
                 <h2 class="hero-title">Ontwikkel nieuwe vaardigheden en leer van de experts</h2>
                 <div class="theme-hero__content default-text">Leer theorie en praktijk van de experts uit de markt. Je kan de geleerde vaardigheden direct toepassen binnen jouw organisatie. </div>
-                <a href="#" class="btn btn-default theme-button bg__primary">Neem direct contact met ons op </a>            </div>
+                <a href="/contact" class="btn btn-default theme-button bg__primary">Neem direct contact met ons op </a>            </div>
             <div class="col-md-5 text-end-define-lg text-center-define">
                 <img src="https://workplaceacademy.nl/wp-content/uploads/2021/02/basisopleiding-workplace-manager.png" class="img-fluid w-75 " style="height:auto;">
             </div>
@@ -23,11 +23,11 @@
     </div>
 </div>
 
-<div class="theme-section bg__lightblue">
+<div class="theme-section">
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="col-md-10 my-5">
-                <h2 class="text-center">Masterclasses</h2>
+                <h2 class="text-start">Masterclasses</h2>
             </div>
         </div>
         <div class="row d-flex justify-content-center">
@@ -78,7 +78,6 @@
         </div>
     </div>
 </div></div>
-
 
 
 <!-- require footer -->

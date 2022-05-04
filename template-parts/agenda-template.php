@@ -24,7 +24,7 @@
     //var_dump($calendar_arr);
     //var_dump($loop);
     $project_done=array();
-    $loop = new WP_Query( array( 'post_type' => 'project_done', 'posts_per_page' => 4 ) ); 
+    $loop = new WP_Query( array( 'post_type' => 'project_done' ) ); 
     while ( $loop->have_posts() ) : $loop->the_post();
     $project_done[]=array(
         'title'=>the_title_attribute( 'echo=0' ),
@@ -51,19 +51,21 @@
 
         <div class="wrapper">
             <div class="theme-hero bg__lightblue">
-            <div class="container">
-                <div class="row my-5 flex-column-reverse flex-md-row align-items-center d-flex justify-content-center">
-                    <div class="col-md-5">
-                        <h2 class="hero-title">Alle activiteiten die je wil volgen als workplace manager</h2>
-                        <div class="theme-hero__content default-text"></div>
-                        <a href="#" class="btn btn-default theme-button bg__secondary">Ik heb een vraag</a>
-                    </div>
-                    <div class="col-md-5    ">
-                        <img src="" style="height:auto;">
-                    </div>
+                <div class="container">
+                    <div class="row my-5 flex-column-reverse flex-md-row align-items-center d-flex justify-content-center">
+                        <div class="col-md-5">
+                            <h2 class="hero-title">Alle activiteiten die je wil volgen als workplace manager</h2>
+                            <div class="theme-hero__content default-text"></div>
+                            <a href="#" class="btn btn-default theme-button bg__secondary">Ik heb een vraag</a>
+                        </div>
+                        <div class="col-md-5    ">
+                            <img src="" style="height:auto;">
+                        </div>
                 </div>
             </div>
         </div>
+
+        
 
 
 <!-- ---------------------------------------------- start agenda ---------------------------------------------- -->
@@ -83,7 +85,7 @@
 
                 <?php foreach($calendar_arr as $workshop){  ?>    
                        
-                    <a href="<?php esc_url(the_permalink($workshop['id'])); ?>" class="blockCardFront rounded rounded-3" style="color:#43454D">
+                    <a href="<?php esc_url(the_permalink($workshop['id'])); ?>" class="blockCardFront rounded rounded-3  mx-md-2 mx-0" style="color:#43454D">
                         <div class="workshopBlock">
                             <img class="" src=<?php echo $workshop['image'] ;?> alt="">
                             <div class="containWorkshopAgenda">
@@ -101,9 +103,9 @@
                             </div>
                         </div>
                         <div class="deToekomstBlock">
-                            <p class="deToekomstText text-uppercase"> <strong><?php echo $workshop['post_title'];?></strong></p>
-                            <p class="platformText">
-                            <?php echo get_the_excerpt($workshop['id']);?>
+                            <p class="deToekomstText text-uppercase text-limit-agenda-title"> <strong><?php echo $workshop['post_title'];?></strong></p>
+                            <p class="platformText text-limit-agenda-description">
+                                <?php echo get_the_excerpt($workshop['id']);?>
                             </p>
                             <div class="detaiElementAgenda">
                                 <div class="janBlock">
@@ -131,13 +133,14 @@
                 <?php } ?>  
             </div>
 
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-12 d-flex justify-content-center my-4">
                     <button type="button" class="btn background__secondary text-white mt-3 px-5">
                         <strong>Allei Activiteiten</strong>  
                     </button>
                 </div>
-            </div>
+            </div> -->
+
         </div>
     </div>
 </div>

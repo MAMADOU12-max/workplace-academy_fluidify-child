@@ -1,11 +1,13 @@
 <?php
     $args = array(
-        'post_type' => 'workshop',
+        'post_type' => 'workshop', 'posts_per_page' => '4',
     );
     $query = new WP_Query( $args );
     $calendar_arr = array();
     foreach($query->get_posts() as $calendar) {
         //var_dump($calendar);break;
+        // if($key == 3) 
+        // break;
         foreach(get_field('date_series', $calendar->ID) as $date_series) {
             $calendar_arr[date('Y-m-d', strtotime($date_series['date_series_start']))] = array(
                 'id' => $calendar->ID,
@@ -64,37 +66,37 @@
         <div class="row d-flex justify-content-center">
             <div class="col-md-10 my-5">
                 <div class="row">
-                    <div class="col-md-6 col-lg-3 p-1" style="height: 230px;">
+                    <div class="col-md-6 col-lg-3 col-6 p-1" style="height: 230px;">
                         <a>
                             <div class="theme-card__wrapper text-center py-4 pt-5">
-                                <img class="img-fluid" style="max-width: 100px;"
+                                <img class="img-fluid" style="max-width: 85px;"
                                 src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Facilitair.png' ?>">    
                                 <h4 class="theme-card__title mt-2 mb-0">Facilitair</h4>
                             </div>
                         </a> 
                     </div>
-                    <div class="col-md-6 col-lg-3 p-1" style="height: 230px;">
+                    <div class="col-md-6 col-lg-3 col-6 p-1" style="height: 230px;">
                         <a>
                             <div class="theme-card__wrapper text-center py-4 pt-5">
-                                <img class="img-fluid" style="max-width: 100px;"
+                                <img class="img-fluid" style="max-width: 85px;"
                                 src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/HR.png' ?>">    
                                 <h4 class="theme-card__title mt-2 mb-0">HR</h4>
                             </div>
                         </a> 
                     </div>
-                    <div class="col-md-6 col-lg-3 p-1" style="height: 230px;">
+                    <div class="col-md-6 col-lg-3 col-6 p-1" style="height: 230px;">
                         <a>
                             <div class="theme-card__wrapper text-center py-4 pt-5">
-                                <img class="img-fluid" style="max-width: 100px;"
+                                <img class="img-fluid" style="max-width: 85px;"
                                 src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Real_Estate.png' ?>">    
                                 <h4 class="theme-card__title mt-2 mb-0">Real Estate</h4>
                             </div>
                         </a> 
                     </div>
-                    <div class="col-md-6 col-lg-3 p-1" style="height: 230px;">
+                    <div class="col-md-6 col-lg-3 col-6 p-1" style="height: 230px;">
                         <a>
                             <div class="theme-card__wrapper text-center py-4 pt-5">
-                                <img class="img-fluid" style="max-width: 100px;"
+                                <img class="img-fluid" style="max-width: 85px;"
                                 src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/IT.png' ?>">    
                                 <h4 class="theme-card__title mt-2 mb-0">IT</h4>
                             </div>
@@ -103,37 +105,37 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-6 col-lg-3 p-1" style="height: 230px;">
+                    <div class="col-md-6 col-lg-3 col-6 p-1" style="height: 230px;">
                         <a>
                             <div class="theme-card__wrapper text-center py-4 pt-5">
-                                <img class="img-fluid" style="max-width: 100px;"
+                                <img class="img-fluid" style="max-width: 85px;"
                                 src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/mobiliteit.png' ?>">    
                                 <h4 class="theme-card__title mt-2 mb-0">Mobiliteit</h4>
                             </div>
                         </a> 
                     </div>
-                    <div class="col-md-6 col-lg-3 p-1" style="height: 230px;">
+                    <div class="col-md-6 col-lg-3 col-6 p-1" style="height: 230px;">
                         <a>
                             <div class="theme-card__wrapper text-center py-4 pt-5">
-                                <img class="img-fluid" style="max-width: 100px;"
+                                <img class="img-fluid" style="max-width: 85px;"
                                 src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Duurzaamheid.png' ?>">    
                                 <h4 class="theme-card__title mt-2 mb-0">Duurzaamheid</h4>
                             </div>
                         </a> 
                     </div>
-                    <div class="col-md-6 col-lg-3 p-1" style="height: 230px;">
+                    <div class="col-md-6 col-lg-3 col-6 p-1" style="height: 230px;">
                         <a>
                             <div class="theme-card__wrapper text-center py-4 pt-5">
-                                <img class="img-fluid" style="max-width: 100px;"
+                                <img class="img-fluid" style="max-width: 85px;"
                                 src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Adviseurs.png' ?>">    
                                 <h4 class="theme-card__title mt-2 mb-0">Adviseurs</h4>
                             </div>
                         </a> 
                     </div>
-                    <div class="col-md-6 col-lg-3 p-1" style="height: 230px;">
+                    <div class="col-md-6 col-lg-3 col-6 p-1" style="height: 230px;">
                         <a>
                             <div class="theme-card__wrapper text-center py-4 pt-5">
-                                <img class="img-fluid" style="max-width: 100px;"
+                                <img class="img-fluid" style="max-width: 85px;"
                                 src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Leveranciers.png' ?>">    
                                 <h4 class="theme-card__title mt-2 mb-0">Leveranciers</h4>
                             </div>
@@ -165,7 +167,7 @@
             <div class="sousBlockFrontAgenda">
 
                 <?php foreach($calendar_arr as $workshop){  ?>    
-                    <a href="<?php esc_url(the_permalink($workshop['id'])); ?>" class="blockCardFront rounded rounded-3 mx-2" style="color:#43454D">
+                    <a href="<?php esc_url(the_permalink($workshop['id'])); ?>" class="blockCardFront rounded rounded-3 mx-md-2 mx-0" style="color:#43454D">
                         <div class="workshopBlock">
                             <img class="" src=<?php echo $workshop['image'] ;?> alt="">
                             <div class="containWorkshopAgenda">
@@ -215,15 +217,14 @@
 
             <div class="row">
                 <div class="col-12 d-flex justify-content-center my-4">
-                    <button type="button" class="btn background__secondary text-white mt-3 px-5">
-                        <strong>Allei Activiteiten</strong>  
-                    </button>
+                    <a href="/agenda" type="button" class="btn background__secondary text-white mt-3 px-5">
+                        <strong>Bekijk de gehele agenda</strong>  
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 <!-- --------------------------------------------------------------- End agenda ---------------------------------------------------------------- -->
 
 
@@ -235,7 +236,7 @@
             <div class="col-md-6 text-center mx-auto col-12">
                 <!-- <h2> Lorem ipsum dolor sit amet consectetur adipisicing. </h2> -->
                 <div class="hero-title text-center">
-                    Lorem ipsum dolor sit amet consectetur adipisicing.
+                    Krijg een idee van de projecten die wij uitvoeren.
                 </div> 
             </div>
         </div>
