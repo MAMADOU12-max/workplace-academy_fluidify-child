@@ -1,58 +1,7 @@
-<!-- ----------------------------------------- Second block of cards ----------------------------------------- -->
-
-<?php if (get_field('fdfd_card')) { ?>
-<!-- <div class="theme-section alt">
-    <div class="container">
-        <div class="row">
-            <?php foreach(get_field('fdfd_card') as $card) { ?>
-            <div class="col-md-6 col-lg-3 p-1">
-                <a href="<?php echo $card['fdfd_card_url']; ?>">
-                    <div class="theme-card__wrapper">
-                        <h4 class="theme-card__title"><?php echo $card['fdfd_card_title']; ?></h4>
-                        <div class="theme-card__duration"><?php echo $card['fdfd_card_subtitle']; ?></div>
-                        <div class="theme-card__description"><?php echo $card['fdfd_card_content']; ?></div>
-                    </div>
-                </a>
-            </div>
-            <?php } ?>
-        </div>
-    </div>
-</div> -->
-<?php } ?>
-
-
-<style>
-    @media screen and (min-width: 1450px) and (max-width: 1480px) {
-        .items-slider-card.cards-item{
-            height: 500px !important;
-        }
-    }
-    /* @media screen and (min-width: 1405px) and (max-width: 1450px) {
-        .items-slider-card.cards-item{
-            height: 580px !important;
-        }
-    } */
-    @media screen and (min-width: 1407px) and (max-width: 1450px) {
-        .items-slider-card.cards-item{
-            height: 520px !important;
-        }
-        .text-button {
-            font-size: 15px !important; 
-        }
-        .text-best-seller {
-            font-size: 12px !important; 
-        }
-    }
-    a:hover {
-        color: none;
-    }
-</style>
-
-
 <div class="theme-section alt pt-0">
     <div class="container" id="cards_section">
     <!-- cards slide -->
-        <div class="row d-flex justify-content-center " >
+        <div class="row bg-white bg-info d-flex justify-content-center " >
 
             <div class="col-md-10">
                 <div class="row" >
@@ -91,7 +40,7 @@
                                         <div class="d-flex align-items-center py-1">
                                             <span class="mx-2" style="width: 23px" >
                                                 <img class="im-fluid" style=""
-                                                src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Meerdere_experts.png' ?>">  
+                                                src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Theorie_en_praktijk.png' ?>">  
                                             </span> 
                                             <span class="text-size-cards" style="margin-top: 5px;  color: #023356"> Meerdere experts </span>
                                         </div>
@@ -144,7 +93,7 @@
                                         <div class="d-flex align-items-center py-1">
                                             <span class="mx-2" style="width: 23px" >
                                                 <img class="im-fluid" style=""
-                                                src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Meerdere_experts.png' ?>">  
+                                                src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Theorie_en_praktijk.png' ?>">  
                                             </span> 
                                             <span class="text-size-cards" style="margin-top: 5px;  color: #023356"> Experts uit de markt </span>
                                         </div>
@@ -165,7 +114,7 @@
                                         <div class="d-flex align-items-center py-1">
                                             <span class="mx-2" style="width: 23px" >
                                                 <img class="im-fluid" style=""
-                                                src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Netwerken.png' ?>">  
+                                                src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Theorie_en_praktijk.png' ?>">  
                                             </span> 
                                             <span class="text-size-cards" style="margin-top: 5px;  color: #023356"> Netwerken </span>
                                         </div>
@@ -216,7 +165,7 @@
                                         <div class="d-flex align-items-center py-1">
                                             <span class="mx-2" style="width: 23px" >
                                                 <img class="im-fluid" style=""
-                                                src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Netwerken.png' ?>">  
+                                                src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Theorie_en_praktijk.png' ?>">  
                                             </span> 
                                             <span class="text-size-cards" style="margin-top: 5px;  color: #023356"> Netwerken </span>
                                         </div>
@@ -288,7 +237,7 @@
                                         <div class="d-flex align-items-center py-1">
                                             <span class="mx-2" style="width: 23px" >
                                                 <img class="im-fluid" style=""
-                                                src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Netwerken.png' ?>">  
+                                                src="<?php  echo get_stylesheet_directory_uri() . '/assets/icons/Theorie_en_praktijk.png' ?>">  
                                             </span> 
                                             <span class="text-size-cards" style="margin-top: 5px;  color: #023356"> Netwerken </span>
                                         </div>
@@ -309,59 +258,3 @@
     </div>
 </div>
 
-
-
-<div class=" mb-5 mx-0 mx-md-2 section-custom">
-    <div class="container pb-5">
-        <div class="row d-flex justify-content-center">
-            <div class="col-md-5 p-3 p-md-1">
-                <a href="/incompany-page">
-                    <div class="theme-card__wrapper">
-
-                        <div class="d-flex bd-highlight mb-3">
-                            <div class=" flex-grow-1 bd-highlight">
-                                <h4 class="theme-card__title text-start"
-                            style="text-align:start">Incompany</h4>
-                            </div>
-                        </div>
-
-                        <div class="theme-card__duration" style="text-align:start"
-                        ><?php echo $card['fdfd_card_content']; ?></div>
-
-                        <button type="button" class="btn background__secondary text-white w-100 mt-3">
-                           <strong>Lees meer</strong>  
-                        </button>
-
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-md-5 p-3 p-md-1">
-                <a href="/incompany-next-template">
-                    <div class="theme-card__wrapper">
-
-                        <div class="d-flex bd-highlight mb-3">
-                            <div class=" flex-grow-1 bd-highlight">
-                                <h4 class="theme-card__title title-with_deborded-button" style="text-align:start">Persoonlijke begeleiding</h4>
-                            </div>
-                            <div class="bd-highlight">
-                                <!-- <button type="button" class="btn btn-success px-3 deborded_button">Neem Contact</button> -->
-                                <button type="button" class="btn text-white px-3 deborded_button deborded_button_gesprek">
-                                    <strong>Vrijblijvend gesprek!</strong>  
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="theme-card__duration" style="text-align:start"
-                        >Individuele begeleiding om er voor te zorgen dat jij een glansrijke carrière doorloopt.</div>
-                        
-                        <button type="button" class="btn background__secondary text-white w-100 mt-3">
-                           <strong>Lees meer</strong>  
-                        </button>
-                    </div>
-                </a>
-            </div>
-
-        </div>
-    </div>
-</div>

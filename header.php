@@ -13,10 +13,14 @@
             padding: 0px;
             font-weight: 500;
         }
+        body{
+            overflow-y: hidden;
+        }
     }
+    
     /* to remove padding right on the mobile screen */
-    body, html {
-        overflow-x: hidden;
+    body{
+        overflow-y: hidden;
     }
 </style>
 
@@ -70,5 +74,11 @@
 
         <div class="main">
 
-        <!-- slick cdn Js -->
+
+   
+<!-- call js file -->
+<script src="<?php echo get_stylesheet_directory_uri();?>/main.js"></script>
+<!-- cdn slick, jquery, bootstrap  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

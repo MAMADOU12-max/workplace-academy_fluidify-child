@@ -286,7 +286,6 @@ a:focus {
   background-size: cover;
 }
 
-
 /*=================================================================
   Latest Posts
 ==================================================================*/
@@ -349,9 +348,13 @@ h3.quote::before {
   left: 0;
 }
 
+
+
 .nav-posts-title {
   line-height: 25px;
   font-size: 18px;
+  /* color: #000; */
+  color: #00d747;
 }
 
 .latest-blog {
