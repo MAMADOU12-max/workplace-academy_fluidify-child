@@ -29,6 +29,156 @@ function my_acf_init() {
         ));
 
         acf_register_block(array(
+            'name'				=> 'logo-slider',
+            'title'				=> __('Logo slider'),
+            'description'		=> __('Logo slider'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+            'category'			=> 'thema',
+            'icon'				=> 'admin-commands',
+            'keywords'			=> array( 'logo', 'start' ),
+        ));
+
+        acf_register_block(array(
+            'name'				=> 'technos-block', 
+            'title'				=> __('Technos block'),
+            'description'		=> __('Technos block'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+            'category'			=> 'thema',
+            'icon'				=> 'admin-commands',
+            'keywords'			=> array( 'logo', 'start' ),
+        ));
+
+        acf_register_block(array(
+            'name'				=> 'projects-block', 
+            'title'				=> __('Projects block'),
+            'description'		=> __('Projects block'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+            'category'			=> 'thema',
+            'icon'				=> 'admin-commands',
+            'keywords'			=> array( 'logo', 'start' ),
+        ));
+
+        acf_register_block(array(
+            'name'				=> 'experts-slider', 
+            'title'				=> __('Experts slider'),
+            'description'		=> __('Experts slider'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+            'category'			=> 'thema',
+            'icon'				=> 'admin-commands',
+            'keywords'			=> array( 'logo', 'start' ),
+        ));
+
+        acf_register_block(array(
+            'name'				=> 'hero-overons', 
+            'title'				=> __('Hero overons'),
+            'description'		=> __('Hero overons'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+            'category'			=> 'thema',
+            'icon'				=> 'admin-commands',
+            'keywords'			=> array( 'logo', 'start' ),
+        ));
+
+        acf_register_block(array(
+            'name'				=> 'overons-section', 
+            'title'				=> __('Overons section'),
+            'description'		=> __('Overons section'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+            'category'			=> 'thema',
+            'icon'				=> 'admin-commands',
+            'keywords'			=> array( 'logo', 'start' ),
+        ));
+
+        acf_register_block(array(
+            'name'				=> 'overons-under', 
+            'title'				=> __('Overons under'),
+            'description'		=> __('Overons under'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+            'category'			=> 'thema',
+            'icon'				=> 'admin-commands',
+            'keywords'			=> array( 'logo', 'start' ),
+        ));
+
+        acf_register_block(array(
+            'name'				=> 'overons-text', 
+            'title'				=> __('Overons text'),
+            'description'		=> __('Overons text'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+            'category'			=> 'thema',
+            'icon'				=> 'admin-commands',
+            'keywords'			=> array( 'logo', 'start' ),
+        ));
+
+        acf_register_block(array(
+            'name'				=> 'events-block', 
+            'title'				=> __('Events block'),
+            'description'		=> __('Events block'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+            'category'			=> 'thema',
+            'icon'				=> 'admin-commands',
+            'keywords'			=> array( 'logo', 'start' ),
+        ));
+
+        acf_register_block(array(
+            'name'				=> 'opleiding-block', 
+            'title'				=> __('Opleiding block'),
+            'description'		=> __('Opleiding block'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+            'category'			=> 'thema',
+            'icon'				=> 'admin-commands',
+            'keywords'			=> array( 'logo', 'start' ),
+        ));
+
+        acf_register_block(array(
+            'name'				=> 'workshops-block', 
+            'title'				=> __('Workshops block'),
+            'description'		=> __('Workshops block'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+            'category'			=> 'thema',
+            'icon'				=> 'admin-commands',
+            'keywords'			=> array( 'logo', 'start' ),
+        ));
+        
+        acf_register_block(array(
+            'name'				=> 'inschrijven-block', 
+            'title'				=> __('Inschrijven block'),
+            'description'		=> __('Inschrijven block'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+            'category'			=> 'thema',
+            'icon'				=> 'admin-commands',
+            'keywords'			=> array( 'logo', 'start' ),
+        ));
+
+        acf_register_block(array(
+            'name'				=> 'masterclass-block', 
+            'title'				=> __('Masterclass block'),
+            'description'		=> __('Masterclass block'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+            'category'			=> 'thema',
+            'icon'				=> 'admin-commands',
+            'keywords'			=> array( 'logo', 'start' ),
+        ));
+
+        acf_register_block(array(
+            'name'				=> 'register-block', 
+            'title'				=> __('Register block'),
+            'description'		=> __('Register block'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+            'category'			=> 'thema',
+            'icon'				=> 'admin-commands',
+            'keywords'			=> array( 'logo', 'start' ),
+        ));
+
+        acf_register_block(array(
+            'name'				=> 'slider-masterclass', 
+            'title'				=> __('Slider masterclass'),
+            'description'		=> __('Slider masterclass'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+            'category'			=> 'thema',
+            'icon'				=> 'admin-commands',
+            'keywords'			=> array( 'logo', 'start' ),
+        ));
+
+        acf_register_block(array(
             'name'				=> 'cards-block',
             'title'				=> __('Cards block'),
             'description'		=> __('Cards block'),
@@ -56,6 +206,16 @@ function my_acf_init() {
             'category'			=> 'thema',
             'icon'				=> 'admin-commands',
             'keywords'			=> array( 'calendar', 'front page' ),
+        ));
+
+        acf_register_block(array(
+            'name'				=> 'incompany-3-block',
+            'title'				=> __('Incompany-3 block'),
+            'description'		=> __('Incompany-3 block'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+            'category'			=> 'thema',
+            'icon'				=> 'admin-commands',
+            'keywords'			=> array( 'Incompany-3', 'front page' ),
         ));
 
         acf_register_block(array(
@@ -138,15 +298,15 @@ function my_acf_init() {
             'keywords'			=> array( 'text', 'text block' ),
         ));
 
-        acf_register_block(array(
-            'name'				=> 'logo-slider-block',
-            'title'				=> __('Logo slider'),
-            'description'		=> __('Logo Slider'),
-            'render_callback'	=> 'my_acf_block_render_callback',
-            'category'			=> 'thema',
-            'icon'				=> 'admin-commands',
-            'keywords'			=> array( 'logo slider', 'logo slider' ),
-        ));
+        // acf_register_block(array(
+        //     'name'				=> 'logo-slider-block',
+        //     'title'				=> __('Logo slider'),
+        //     'description'		=> __('Logo Slider'),
+        //     'render_callback'	=> 'my_acf_block_render_callback',
+        //     'category'			=> 'thema',
+        //     'icon'				=> 'admin-commands',
+        //     'keywords'			=> array( 'logo slider', 'logo slider' ),
+        // ));
 
         acf_register_block(array(
             'name'				=> 'product-block-page',

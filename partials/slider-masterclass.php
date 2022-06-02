@@ -45,7 +45,7 @@
                         foreach ($blog as $key => $value) {
                     ?>           
                       
-                        <div class="col-md-4 d-flex justify-content-center px-md-2 px-2">
+                        <div class="col-md-4 d-flex justify-content-center px-md-2 px-1">
                             <a href="<?php echo get_the_permalink($value['id']);?>">
                                 <div class="card my-md-2 my-3 mx-0 border border-white" style="max-width: 25rem;">
                                     <img src="<?php echo $value["image"];?>"

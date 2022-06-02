@@ -20,12 +20,20 @@ $posttags = get_the_tags();
 
 ?>
 
+<style>
+    a {
+        color: black !important;
+    }
+    a:hover {
+        color: #47a99e !important;   
+    }
+</style>
 <div class="main-wrapper ">
 
     <section class="section blog-wrap bg-gray">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6 col-11">
                     <div class="row">
                         <div class="col-lg-12 mb-5">
                             <div class="single-blog-item">
@@ -94,7 +102,7 @@ $posttags = get_the_tags();
                                 <a class="posts-next" href="<?php echo $next_link;?>">
                                     <div class="posts-next-item pt-4 pt-lg-0">
                                         <span class="nav-posts-desc text-lg-right text-md-right text-color d-block">- Next Post</span>
-                                        <h6 class="nav-posts-title mt-1">
+                                        <h6 class="nav-posts-title mt-1 ">
                                             <?php echo get_the_title($next);?>
                                         </h6>
                                     </div>
@@ -102,75 +110,9 @@ $posttags = get_the_tags();
                             </div>
                         </div>
 
-                        <!--
-<div class="col-lg-12 mb-5">
-<div class="comment-area card border-0 p-5">
-<h4 class="mb-4">2 Comments</h4>
-<ul class="comment-tree list-unstyled">
-<li class="mb-5">
-<div class="comment-area-box">
-<img alt="" src="img/blog/test1.jpg" class="img-fluid float-left mr-3 mt-2">
-
-<h5 class="mb-1">Philip W</h5>
-<span>United Kingdom</span>
-
-<div class="comment-meta mt-4 mt-lg-0 mt-md-0 float-lg-right float-md-right">
-<a href="#"><i class="icofont-reply mr-2 text-muted"></i>Reply |</a>
-<span class="date-comm">Posted October 7, 2018 </span>
-</div>
-
-<div class="comment-content mt-3">
-<p>Some consultants are employed indirectly by the client via a consultancy staffing company, a company that provides consultants on an agency basis. </p>
-</div>
-</div>
-</li>
-
-<li>
-<div class="comment-area-box">
-<img alt="" src="img/blog/test2.jpg" class="mt-2 img-fluid float-left mr-3">
-
-<h5 class="mb-1">Philip W</h5>
-<span>United Kingdom</span>
-
-<div class="comment-meta mt-4 mt-lg-0 mt-md-0 float-lg-right float-md-right">
-<a href="#"><i class="icofont-reply mr-2 text-muted"></i>Reply |</a>
-<span class="date-comm">Posted October 7, 2018</span>
-</div>
-
-<div class="comment-content mt-3">
-<p>Some consultants are employed indirectly by the client via a consultancy staffing company, a company that provides consultants on an agency basis. </p>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-
-<div class="col-lg-12">
-<form class="contact-form bg-white rounded p-5" id="comment-form">
-<h4 class="mb-4">Write a comment</h4>
-<div class="row">
-<div class="col-md-6">
-<div class="form-group">
-<input class="form-control" type="text" name="name" id="name" placeholder="Name:">
-</div>
-</div>
-<div class="col-md-6">
-<div class="form-group">
-<input class="form-control" type="text" name="mail" id="mail" placeholder="Email:">
-</div>
-</div>
-</div>
-
-<textarea class="form-control mb-3" name="comment" id="comment" cols="30" rows="5" placeholder="Comment"></textarea>
-
-<input class="btn btn-main btn-round-full" type="submit" name="submit-contact" id="submit_contact" value="Submit Message">
-</form>
-</div>
--->
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-md-4 col-11">
                     <div class="sidebar-wrap">
                         <div class="sidebar-widget card border-0 mb-3">
                             <img src="<?php echo $author; ?>" alt="" class="img-fluid">
@@ -224,7 +166,7 @@ $posttags = get_the_tags();
                             <?php
                             if ($posttags) {
                                 foreach($posttags as $tag) {
-                                    echo '<a href=#">'.$tag->name . '</a>'; 
+                                    echo '<a href=#" class="text-white" style="background: #0B6EB9">'.$tag->name . '</a>'; 
                                 }
                             }
                             ?>

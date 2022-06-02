@@ -2,7 +2,7 @@
 <div class="theme-section bg__primary addMarginPadding-top">
     <div class="container">
         <div class="row flex-column-reverse flex-md-row align-items-center">
-            <div class="col-md-5 mx-auto py-md-0 py-4 text-center-define">
+            <div class="col-md-5 mx-auto py-md-0 py-4 text-center-define px-md-0">
                 <h2 class="hero-title text-white text-center-define">Direct contact met één van onze adviseurs?</h2>
                 <div class="theme-hero__content default-text text-white">
                     We helpen je graag met jouw specifieke vragen over deelname aan één van onze activiteiten, informatie over workplace management of de mogelijkheden voor jouw team / organisatie.    
@@ -33,7 +33,7 @@
                     <?php echo do_shortcode('[ninja_form id=9]') ?>
                 </div>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-5 mr-md-5">
                 <div class="theme-form__second-col">
                     <!-- <div class="text-default">
                         <?php echo get_field('fdfd_content'); ?>

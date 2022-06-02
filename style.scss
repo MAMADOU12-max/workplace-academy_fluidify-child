@@ -49,6 +49,7 @@ body {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
+    // overflow-y: hidden !important;
 }
 
 * {
@@ -87,7 +88,7 @@ img{
         column-count:1;
     }
 }
-
+ 
 
 /*/ heading /*/
 h1{
