@@ -22,9 +22,9 @@ $posttags = get_the_tags();
 
 <style>
     a {
-        color: black !important;
+        /* color: red !important; */
     }
-    a:hover {
+    a:hover  {
         color: #47a99e !important;   
     }
 </style>
@@ -35,11 +35,11 @@ $posttags = get_the_tags();
             <div class="row d-flex justify-content-center">
                 <div class="col-md-6 col-11">
                     <div class="row">
-                        <div class="col-lg-12 mb-5">
+                        <div class="col-lg-12 mb-5" >
                             <div class="single-blog-item">
                                 <img src="<?php echo $image; ?>" alt="" class="img-fluid rounded">
 
-                                <div class="blog-item-content bg-white blogPadding">
+                                <div class="blog-item-content bg-white blogPadding px-md-5">
                                     <div class="blog-item-meta bg-gray py-1 px-2">
                                         <span class="text-muted text-capitalize mr-3"><i class="ti-pencil-alt mr-2"></i><?php echo $posttags[0]->name; ?></span>
                                         <span class="text-muted text-capitalize mr-3"><i class="ti-comment mr-2"></i>0 Comments</span>
@@ -53,19 +53,19 @@ $posttags = get_the_tags();
                                         <ul class="float-left list-inline"> 
                                             <li>Tags:</li> 
                                             <?php foreach($posttags as $posttag) { ?>
-                                                <li class="list-inline-item"><a href="#" rel="tag"><?php echo $posttag->name; ?></a></li>
+                                                <li class="list-inline-item"><a href="#" class="text-dark font-weight-bold" rel="tag"><?php echo $posttag->name; ?></a></li>
                                             <?php } ?>
                                         </ul>        
 
                                         <ul class="float-right list-inline">
                                             <li class="list-inline-item"> Share: </li>
-                                            <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-                                            <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                                            <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-facebook-f text-dark" aria-hidden="true"></i></a></li>
+                                            <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-twitter text-dark" aria-hidden="true"></i></a></li>
                                             <li class="list-inline-item">
                                                 <a href="#"><i class="fab fa-linkedin-in text-muted"></i></a>
                                             </li>
-                                            <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
-                                            <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
+                                            <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-pinterest-p text-dark" aria-hidden="true"></i></a></li>
+                                            <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-google-plus text-dark" aria-hidden="true"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -82,14 +82,17 @@ $posttags = get_the_tags();
                                 $prev_link = get_permalink($prev);
 
                                 ?>
-                                <a class="post-prev align-items-center" href="<?php echo $prev_link;?>">
+                                <a class="post-prev align-items-center w-50 pr-md-3" href="<?php echo $prev_link;?>">
                                     <div class="posts-prev-item mb-4 mb-lg-0">
-                                        <span class="nav-posts-desc text-color">- Previous Post</span>
+                                        <span class="nav-posts-desc text-color">
+                                            <img style="width: 25px;" src="<?php  echo get_stylesheet_directory_uri() . '/assets/img/prev-arrow.png' ?>" alt="">
+                                            Previous Post
+                                        </span>
 
-                                        <h6 class="nav-posts-title mt-1">
+                                        <h6 class="nav-posts-title mt-1 font-weight-bold">
                                             <?php echo get_the_title($prev);?>
                                         </h6>
-                                    </div>
+                                    </div>  
                                 </a>
                                 <div class="border"></div>
 
@@ -99,10 +102,13 @@ $posttags = get_the_tags();
                                 $next_link = get_permalink($next);
 
                                 ?>
-                                <a class="posts-next" href="<?php echo $next_link;?>">
+                                <a class="posts-next w-50 pl-md-3" href="<?php echo $next_link;?>">
                                     <div class="posts-next-item pt-4 pt-lg-0">
-                                        <span class="nav-posts-desc text-lg-right text-md-right text-color d-block">- Next Post</span>
-                                        <h6 class="nav-posts-title mt-1 ">
+                                        <span class="nav-posts-desc text-lg-right text-md-right text-color d-block">
+                                            Next Post
+                                            <img style="width: 25px;" src="<?php  echo get_stylesheet_directory_uri() . '/assets/img/next-arrow.png' ?>" alt="">                                        
+                                        </span>
+                                        <h6 class="nav-posts-title mt-1 font-weight-bold ">
                                             <?php echo get_the_title($next);?>
                                         </h6>
                                     </div>
@@ -112,36 +118,36 @@ $posttags = get_the_tags();
 
                     </div>
                 </div>
-                <div class="col-md-4 col-11">
-                    <div class="sidebar-wrap">
-                        <div class="sidebar-widget card border-0 mb-3">
+                <div class="col-md-4 col-11" >
+                    <div class="sidebar-wrap" >
+                        <div class="sidebar-widget card border-0 mb-3" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
                             <img src="<?php echo $author; ?>" alt="" class="img-fluid">
                             <div class="card-body p-4 text-center">
-                                <h5 class="mb-0 mt-4"><?php echo(get_userdata($post->post_author)->data->display_name); ?></h5>
+                                <h4 class="mb-0 mt-4 font-weight-bold"><?php echo(get_userdata($post->post_author)->data->display_name); ?></h4>
                                 <p><?php echo $functie; ?></p>
                                 <p><?php echo $biographical; ?></p>
 
-                                <ul class="list-inline author-socials">
-                                    <li class="list-inline-item mr-3">
-                                        <a href="#"><i class="fab fa-facebook-f text-muted"></i></a>
+                                <ul class="list-inline author-socials text-center">
+                                    <li class="list-inline-item mx-2">
+                                        <a href="#"><i class="fab fa-facebook-f text-muted fa-2x"></i></a>
                                     </li>
-                                    <li class="list-inline-item mr-3">
-                                        <a href="#"><i class="fab fa-twitter text-muted"></i></a>
+                                    <li class="list-inline-item mx-2">
+                                        <a href="#"><i class="fab fa-twitter text-muted fa-2x"></i></a>
                                     </li>
-                                    <li class="list-inline-item mr-3">
-                                        <a href="#"><i class="fab fa-linkedin-in text-muted"></i></a>
+                                    <li class="list-inline-item mx-2">
+                                        <a href="#"><i class="fab fa-linkedin-in text-muted fa-2x"></i></a>
                                     </li>
-                                    <li class="list-inline-item mr-3">
-                                        <a href="#"><i class="fab fa-pinterest text-muted"></i></a>
+                                    <li class="list-inline-item mx-2">
+                                        <a href="#"><i class="fab fa-pinterest text-muted fa-2x"></i></a>
                                     </li>
-                                    <li class="list-inline-item mr-3">
-                                        <a href="#"><i class="fab fa-behance text-muted"></i></a>
+                                    <li class="list-inline-item mx-2">
+                                        <a href="#"><i class="fab fa-behance text-muted fa-2x"></i></a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
 
-                        <div class="sidebar-widget latest-post card border-0 p-4 mb-3">
+                        <div class="sidebar-widget latest-post card border-0 p-4 mb-3" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
                             <h5>Latest Posts</h5>
                             
                             <?php
@@ -153,20 +159,20 @@ $posttags = get_the_tags();
                             <div class="media border-bottom py-3">
                                 <a href="<?php echo get_the_permalink($latest['ID']);?>"><img class="mr-4" src="img/blog/bt-3.jpg" alt=""></a>
                                 <div class="media-body">
-                                    <h6 class="my-2"><a href="#"><?php echo get_the_title($latest['ID']);?></a></h6>
+                                    <h6 class="my-2 text-dark"><a href="#"><?php echo get_the_title($latest['ID']);?></a></h6>
                                     <span class="text-sm text-muted"><?php echo get_the_date('d-m-Y',$latest['ID']);?></span>
                                 </div>
                             </div>
                             <?php }?>
                         </div>
 
-                        <div class="sidebar-widget bg-white rounded tags p-4 mb-3">
+                        <div class="sidebar-widget bg-white rounded tags p-4 mb-3" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
                             <h5 class="mb-4">Tags</h5>
 
                             <?php
                             if ($posttags) {
                                 foreach($posttags as $tag) {
-                                    echo '<a href=#" class="text-white" style="background: #0B6EB9">'.$tag->name . '</a>'; 
+                                    echo '<a href=#" class="text-white font-weight-bold btn border-0 mx-1" style="background: #0B6EB9">'.$tag->name . '</a>'; 
                                 }
                             }
                             ?>
