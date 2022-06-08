@@ -22,7 +22,7 @@
                             <!-- <a href="/contact/" class="btn btn-default theme-button bg__secondary">
                                 <strong>Neem direct contact met ons op</strong>  
                             </a> -->
-                            <a href="#available_timeschedules" class="btn btn-default theme-button bg__primary">
+                            <a href="#ava   ilable_timeschedules" class="btn btn-default theme-button bg__primary">
                                 <strong>Schrijf mij in</strong> 
                             </a>
                             <a href="/contact" class="btn btn-default theme-button bg__secondary">
@@ -85,6 +85,8 @@
                                     <button type="button" class="btn text-white w-100 my-2 bg__primary py-2 rounded rounded-4">
                                         <strong class="text-button m-0">Wij nemen contact met je op</strong>  
                                     </button>
+
+                                    <?php echo do_shortcode('[ninja_form id=9]') ?>
                                     <!--  end place form  php -->
 
 
