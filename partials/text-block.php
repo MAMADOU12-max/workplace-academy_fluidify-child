@@ -1,6 +1,6 @@
 <?php
      $args = array(
-        'post_type' => 'workshop', 'posts_per_page' => '4',
+        'post_type' => 'workshop', 'posts_per_page' => '7',
     );
     $query = new WP_Query( $args );
     $calendar_arr = array();
@@ -8,6 +8,7 @@
         //var_dump($calendar);break;
         // if($key == 3) 
         // break;
+        if(!empty(get_field('date_series', $calendar->ID)))
         foreach(get_field('date_series', $calendar->ID) as $date_series) {
             $calendar_arr[date('Y-m-d', strtotime($date_series['date_series_start']))] = array(
                 'id' => $calendar->ID,
@@ -28,6 +29,7 @@
     $loop = new WP_Query( array( 'post_type' => 'project_done', 'posts_per_page' => 4 ) ); 
     while ( $loop->have_posts() ) : $loop->the_post();
     $project_done[]=array(
+        'id'=>get_the_ID(),
         'title'=>the_title_attribute( 'echo=0' ),
         'content'=>get_the_content(),
         'image'=>get_the_post_thumbnail_url(),
@@ -258,7 +260,7 @@
                         foreach ($project_done as $key => $value) {
                     ?>
                         <div class="col-md-6 px-4 py-1 card_side" >
-                            <a href="/incompany-4-template">
+                            <a href=<?php echo "/incompany-4-template?project-id=".$value['id']; ?>>
                                 <div class="row d-flex bd-highlight background__lightblue rounded rounded-5 theme-card__wrapper section-height_custom">
                                     <div class="col-md-3">
                                         <img class="img_card m-2"

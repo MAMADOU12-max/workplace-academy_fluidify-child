@@ -4,12 +4,12 @@
     }
 </style>
 
-<body class="page-template-default page page-id-73 wp-custom-logo">
+<!-- <body class="page-template-default page page-id-73 wp-custom-logo"> -->
 
     <!-- require header -->
     <?php get_header(); ?>
 
-    <div class="main"> 
+    <!-- <div class="main">  -->
 
         <div class="wrapper">
             <div class="theme-hero bg__lightblue">
@@ -24,6 +24,7 @@
                             </a> -->
                             <a href="#ava   ilable_timeschedules" class="btn btn-default theme-button bg__primary">
                                 <strong>Schrijf mij in</strong> 
+
                             </a>
                             <a href="/contact" class="btn btn-default theme-button bg__secondary">
                                 <strong>Neem contact op</strong>
@@ -69,7 +70,7 @@
                                 <form>
                                     
                                     <!--  start place form  php -->
-                                    <div class="form-outline my-2">
+                                    <!-- <div class="form-outline my-2">
                                         <input type="text" id="form2Example1" class="form-control border border-white rounded py-3 text-center" placeholder="Naam" />
                                     </div>
 
@@ -84,9 +85,9 @@
 
                                     <button type="button" class="btn text-white w-100 my-2 bg__primary py-2 rounded rounded-4">
                                         <strong class="text-button m-0">Wij nemen contact met je op</strong>  
-                                    </button>
+                                    </button> -->
 
-                                    <?php echo do_shortcode('[ninja_form id=9]') ?>
+                                    <?php echo do_shortcode('[ninja_form id=16]') ?>
                                     <!--  end place form  php -->
 
 
@@ -98,7 +99,7 @@
                                     </button>
                                     <button type="button" class="btn text-white w-100 mt-2 py-2" style="background-color: #003358;">
                                         <strong class="text-button m-0">Stuur een mail</strong>  
-                                    </button>
+                                    </button>   
 
                                 </form>
                             </div>
@@ -147,11 +148,11 @@
                     </div>
                 </div>
                 
-                <div class="row d-flex justify-content-center">
+                <!-- <div class="row d-flex justify-content-center">
                     <div class="col-12 col-md-10">
                         <div class="theme-blurb__slick__slider expert_slide">
                             
-                            <div class="theme-blurb__slide-wrapper"> <!-- slide item -->
+                            <div class="theme-blurb__slide-wrapper">
                                 <div class="col-md">
                                     <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2022/02/Jan-Klein-Goldewijk.jpeg"></div>
                                     <div class="theme-blurb__title">Jan Klein Goldewijk</div>
@@ -161,99 +162,34 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="theme-blurb__slide-wrapper"> <!-- slide item -->
-                                <div class="col-md">
-                                    <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2022/02/Roelof-van-der-Kooi.jpeg"></div>
-                                    <div class="theme-blurb__title">Roelof van der Kooi</div>
-                                    <div class="theme-blurb__description">Hoofd Facilitair Bedrijf bij het Van Gogh Museum</div>
-                                    <div class="theme-blurb__icons">
-                                        <a href="https://nl.linkedin.com/in/roelofvanderkooi" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="theme-blurb__slide-wrapper"> <!-- slide item -->
-                                <div class="col-md">
-                                    <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2022/02/Marc-Kooij.jpeg"></div>
-                                    <div class="theme-blurb__title">Marc Kooij</div>
-                                    <div class="theme-blurb__description">Senior Business Development Manager SPIE</div>
-                                    <div class="theme-blurb__icons">
-                                        <a href="https://nl.linkedin.com/in/marckooijeindhoven" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="theme-blurb__slide-wrapper"> <!-- slide item -->
-                                <div class="col-md">
-                                    <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2021/09/F.-Zilte-C__DSC1891.jpg"></div>
-                                    <div class="theme-blurb__title">Babs van der Zon</div>
-                                    <div class="theme-blurb__description">Co-Founder SUB</div>
-                                    <div class="theme-blurb__icons">
-                                        <a href="https://nl.linkedin.com/in/babs-mammen-van-der-zon-6593946" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="theme-blurb__slide-wrapper"> <!-- slide item -->
-                                <div class="col-md">
-                                    <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2021/09/Marc-Jutte.png"></div>
-                                    <div class="theme-blurb__title">Marc Jutte</div>
-                                    <div class="theme-blurb__description">Eigenaar Instatera</div>
-                                    <div class="theme-blurb__icons">
-                                        <a href="https://nl.linkedin.com/in/marcjutte" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="theme-blurb__slide-wrapper"> <!-- slide item -->
-                                <div class="col-md">
-                                    <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2021/06/Bas-van-doeleb.jpeg"></div>
-                                    <div class="theme-blurb__title">Bas van Doelen</div>
-                                    <div class="theme-blurb__description">Consultant Working Conditions and Healthy Work</div>
-                                    <div class="theme-blurb__icons">
-                                        <a href="https://www.linkedin.com/in/bas-van-der-doelen-1a0b606/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="theme-blurb__slide-wrapper"> <!-- slide item -->
-                                <div class="col-md">
-                                    <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2021/06/Jack-Stuifbergen-Breedweer-foto-LinkedIn-300x300-1.jpeg"></div>
-                                    <div class="theme-blurb__title">Jack Stuifbergen</div>
-                                    <div class="theme-blurb__description">Directeur Breedweer</div>
-                                    <div class="theme-blurb__icons">
-                                        <a href="https://nl.linkedin.com/in/jackstuifbergen" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="theme-blurb__slide-wrapper"> <!-- slide item -->
-                                <div class="col-md">
-                                    <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2021/06/jeroen-Zonneveld.jpeg"></div>
-                                    <div class="theme-blurb__title">Jeroen Zonneveld</div>
-                                    <div class="theme-blurb__description">Co-founder SUB</div>
-                                    <div class="theme-blurb__icons">
-                                        <a href="https://nl.linkedin.com/in/jeroen-zonneveld-a120791b" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="theme-blurb__slide-wrapper"> <!-- slide item -->
-                                <div class="col-md">
-                                    <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2021/03/Michel-Pan.jpeg"></div>
-                                    <div class="theme-blurb__title">Michel Pan</div>
-                                    <div class="theme-blurb__description">Business strategy bij D&#038;B The Facility Group</div>
-                                    <div class="theme-blurb__icons">
-                                        <a href="https://www.linkedin.com/in/michel-pan/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="theme-blurb__slide-wrapper"> <!-- slide item -->
-                                <div class="col-md">
-                                    <div class="theme-blurb__image"><img src="https://workplaceacademy.nl/wp-content/uploads/2021/03/Ilya-Devèrs.jpeg"></div>
-                                    <div class="theme-blurb__title">Ilya Devèrs</div>
-                                    <div class="theme-blurb__description">Oprichter Work &#038; People Analytics</div>
-                                    <div class="theme-blurb__icons">
-                                        <a href="https://www.linkedin.com/in/theilya/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
-                </div>     
+                </div>     -->
+
+                <div class="row d-flex justify-content-center">
+                    <div class="col-12 col-md-10">
+                        <div class="theme-blurb__slick__slider expert_slide">
+                            
+                        <?php foreach(get_field('fdfd_experts') as $expert) { ?>
+                            <div class="theme-blurbslide-wrapper"> <!-- slide item -->
+                                <div class="col-md">
+                                    <div class="theme-blurb__image"><img src="<?php echo get_the_post_thumbnail_url($expert->ID); ?>"></div>
+                                    <div class="theme-blurb__title"><?php echo $expert->post_title;?></div>
+                                    <div class="theme-blurb__description"><?php echo get_the_excerpt($expert->ID);?></div>
+                                    <div class="theme-blurb__icons">
+                                        <a href="<?php echo get_field('fdfd_expert_linkedin', $expert->ID);?>" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php } ?>
+                          
+                           
+                        </div>
+                    </div>
+                </div>    
+                
+
             </div>
         </div>
 
@@ -296,15 +232,10 @@
 
 
 
-    </div>
+    <!-- </div> -->
     
-</body>
+<!-- </body> -->
 
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<!-- slick cdn Js -->
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script>
      $('.expert_slide').slick({
         // centerMode: true,

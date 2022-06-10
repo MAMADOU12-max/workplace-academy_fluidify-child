@@ -209,7 +209,7 @@
             </div>
         </div>
 
-        <div class="theme-slider bg__primary mt-5">
+        <!-- <div class="theme-slider bg__primary mt-5">
             <div class="container">
                 <div class="row d-flex justify-content-center">
                     <div class="col-md-10">
@@ -217,9 +217,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <div class="theme-slider bg__lightblue">
+        <!-- <div class="theme-slider bg__lightblue">
             <div class="container">
                 <div class="row d-flex justify-content-center">
                     <div class="col-md-10">
@@ -232,7 +232,7 @@
 
 
                             <a href="https://workplaceacademy.nl/workshop/de-4-themas-voor-een-duurzaam-en-gezond-kantoor/">
-                                <div class="theme-slider__slide__wrapper"> <!-- slide item -->
+                                <div class="theme-slider__slide__wrapper"> 
                                     <div class="theme-slider__slide__wrapper__head">
                                         <img src="https://workplaceacademy.nl/wp-content/uploads/2022/02/masterclass-duurzaam-en-gezond-kantoor.001.jpeg">
                                         <div class="theme-slider__slide__items">
@@ -252,7 +252,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
 </div>
 
