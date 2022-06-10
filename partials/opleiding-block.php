@@ -1,3 +1,38 @@
+<?php
+    $args = array(
+        'post_type' => 'workshop',
+
+    );
+    $query = new WP_Query( $args );
+    $calendar_arr = array();
+    foreach($query->get_posts() as $calendar) {
+       $category= get_the_category($calendar->ID)[0]->name;
+       if (is_array(get_field('date_series', $calendar->ID)) || is_object(get_field('date_series', $calendar->ID)))        
+        foreach(get_field('date_series', $calendar->ID) as $date_series) {
+            //var_dump($date_series);
+            if ($category=='Opleiding')
+            {
+                $calendar_arr[date('Y-m-d', strtotime($date_series['date_series_start']))] = array(
+                    'id' => $calendar->ID,
+                    'post_type'=> $category ,
+                    'start' => $date_series['date_series_start'],
+                    'author' => get_the_author_meta('display_name', get_post_field('post_author', $calendar->ID)),
+                    'author_id' => get_post_field('post_author', $calendar->ID),
+                    'price' => $date_series['price'],
+                    'post_title'=> get_post_field('post_title', $calendar->ID),
+                    'image'=> get_the_post_thumbnail_url($calendar->ID),
+
+                );
+            }
+        }
+    }
+    ksort($calendar_arr);
+     //var_dump($calendar_arr);
+
+?>
+
+
+
 <div class="wrapper">
     <div class="theme-hero bg__lightblue">
     <div class="container">
@@ -36,47 +71,79 @@
                 </div>
             </div>
                 
-            <!-- <div class="col-md-3 col-sm-6 text-center-define text-end-define-lg px-0 offset-md-1">
-                <div class="theme-card__wrapper ">
-                    <h4 class="theme-card__title">Interesse</h4>
-                    <div class="theme-card__duration">Maar toch nog een vraag?</div>
-
-                    <div class="theme-card__select-radio_content">
-                        <form>
-                            <div class="form-outline my-2">
-                                <input type="text" id="form2Example1" class="form-control border border-white rounded py-3 text-center" placeholder="Naam" />
-                            </div>
-
-                            <div class="form-outline my-2">
-                                <input type="email" id="form2Example2" class="form-control border border-white rounded py-3 text-center" placeholder="Email" />
-                            </div>
-
-                            <div class="form-outline my-2">
-                                <input type="email" id="form2Example2" class="form-control border border-white rounded py-3 text-center " placeholder="Telefoon" />
-                            </div>
-
-
-                            <button type="button" class="btn text-white w-100 my-2 bg__primary py-2 rounded rounded-4">
-                                <strong class="text-button m-0">Wij nemen contact met je op</strong>  
-                            </button>
-
-                            <h3 class="line-text my-3"><span  class="line-center">Of</span></h3>
-
-
-                            <button type="button" class="btn text-white w-100 my-2 bg__secondary py-2">
-                                <strong class="text-button m-0">Bel direct</strong>  
-                            </button>
-                            <button type="button" class="btn text-white w-100 mt-2 py-2" style="background-color: #003358;">
-                                <strong class="text-button m-0">Bekijk onze events</strong>  
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div> -->
-
         </div>
     </div>
 </div>
+
+
+<!-- ---------------------------------------------- dynamic worshop --------------------------------------------- -->
+<div class="wrapper">
+    <div class="theme-hero addPadding-top">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-10">
+                    <div class="row d-flex justify-content-md-start justify-content-center">
+                        <?php
+                            foreach ($calendar_arr as $key => $value) {
+                        ?>
+                        <div class="col-md-4 px-0">
+                            <a  href="<?php esc_url(the_permalink($value['id'])); ?>">
+                                <div class="theme-slider__slide__wrapper"> <!-- slide item -->
+                                    <div class="theme-slider__slide__wrapper__head">
+                                        <img src=<?php echo $value['image'] ;?>>
+                                      
+                                    </div>
+                                    <div class="theme-slider__slide__wrapper__description">
+
+                                        <div class="">
+                                            <div class="theme-slider__slide__wrapper__head bg-white" style='height: 50px'>
+                                                <div class="theme-slider__slide__items text-dark pl-0">
+                                                    <div class="theme-slider__slide__items__icon">
+                                                        <img alt='' src='https://secure.gravatar.com/avatar/ebe4d299984d515ee832ac64cb16396d?s=96&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/ebe4d299984d515ee832ac64cb16396d?s=192&#038;d=mm&#038;r=g 2x' class='avatar avatar-96 photo' height='96' width='96' loading='lazy'/></div><div class="theme-slider__slide__items__item"><strong class="text-dark">WorkPlace Academy</strong></div>
+                                                    <div class="theme-slider__slide__items__icon">
+                                                        <i class="fas fa-euro-sign"></i></div>
+                                                        <div class="theme-slider__slide__items__item text-dark">
+                                                        <strong class="text-dark">
+                                                            <?php echo $value['price']; ?></strong></div>
+                                                    <!-- <div class="theme-slider__slide__items__icon"><i class="far fa-calendar-alt"></i></div><div class="theme-slider__slide__items__item"><strong>26 May</strong></div> -->
+                                                
+                                                    <div class="theme-slider__slide__items__icon">
+                                                        <i class="far fa-calendar-alt"></i>
+                                                    </div>
+                                                    <div class="theme-slider__slide__items__item text-dark m-0" style="width: 35%;">
+                                                        <strong>
+                                                                <?php
+                                                                    echo date("d", strtotime($value['start']))." ";
+                                                                    $dateObj   = DateTime::createFromFormat('!m', date("m", strtotime($value['start'])));
+                                                                    $monthName = $dateObj->format('F'); 
+                                                                    echo $monthName;
+                                                                ?>
+                                                        </strong>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+
+                                        <h4><?php echo $value['post_title']; ?></h4>
+                                        <?php echo get_the_excerpt($value['id']);?>                       
+                                        <div class="theme-slider__caret"><i class="fa fa-caret-right"></i></div>                        <div class="theme-slider__caret"><i class="fa fa-caret-right"></i></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <?php 
+                            }
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -------------------------------------------- dynamic course workshop --------------------------------------- -->
+
 
 
 <div class="theme-section">

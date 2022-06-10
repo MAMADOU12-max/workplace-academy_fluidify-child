@@ -1,3 +1,35 @@
+<?php
+    $args = array(
+        'post_type' => 'workshop',
+    );
+    $query = new WP_Query( $args );
+    $calendar_arr = array();
+    foreach($query->get_posts() as $calendar) {
+       $category= get_the_category($calendar->ID)[0]->name;
+       if (is_array(get_field('date_series', $calendar->ID)) || is_object(get_field('date_series', $calendar->ID)))        
+        foreach(get_field('date_series', $calendar->ID) as $date_series) {
+            //var_dump($date_series);
+            if ($category=='Workshop')
+            {
+                $calendar_arr[date('Y-m-d', strtotime($date_series['date_series_start']))] = array(
+                    'id' => $calendar->ID,
+                    'post_type'=> $category ,
+                    'start' => $date_series['date_series_start'],
+                    'author' => get_the_author_meta('display_name', get_post_field('post_author', $calendar->ID)),
+                    'author_id' => get_post_field('post_author', $calendar->ID),
+                    'price' => $date_series['price'],
+                    'post_title'=> get_post_field('post_title', $calendar->ID),
+                    'image'=> get_the_post_thumbnail_url($calendar->ID),
+
+                );
+            }
+        }
+    }
+    ksort($calendar_arr);
+     //var_dump($calendar_arr);
+
+?>
+
 <div class="wrapper">
     <div class="theme-hero bg__lightblue">
     <div class="container">
@@ -35,48 +67,78 @@
                     </p>
                 </div>
             </div>
-                
-            <!-- <div class="col-md-3 col-sm-6 text-center-define text-end-define-lg px-0 offset-md-1">
-                <div class="theme-card__wrapper">
-                    <h4 class="theme-card__title">Interesse</h4>
-                    <div class="theme-card__duration">Maar toch nog een vraag?</div>
-
-                    <div class="theme-card__select-radio_content">
-                        <form>                                    
-                            <div class="form-outline my-2">
-                                <input type="text" id="form2Example1" class="form-control border border-white rounded py-3 text-center" placeholder="Naam" />
-                            </div>
-
-                            <div class="form-outline my-2">
-                                <input type="email" id="form2Example2" class="form-control border border-white rounded py-3 text-center" placeholder="Email" />
-                            </div>
-
-                            <div class="form-outline my-2">
-                                <input type="email" id="form2Example2" class="form-control border border-white rounded py-3 text-center " placeholder="Telefoon" />
-                            </div>
-
-
-                            <button type="button" class="btn text-white w-100 my-2 bg__primary py-2 rounded rounded-4">
-                                <strong class="text-button m-0">Wij nemen contact met je op</strong>  
-                            </button>
-
-                            <h3 class="line-text my-3"><span  class="line-center">Of</span></h3>
-
-
-                            <button type="button" class="btn text-white w-100 my-2 bg__secondary py-2">
-                                <strong class="text-button m-0">Bel direct</strong>  
-                            </button>
-                            <button type="button" class="btn text-white w-100 mt-2 py-2" style="background-color: #003358;">
-                                <strong class="text-button m-0">Bekijk onze events</strong>  
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div> -->
 
         </div>
     </div>
 </div>
+
+<!-- ---------------------------------------------- dynamic worshop --------------------------------------------- -->
+<div class="wrapper">
+    <div class="theme-hero addPadding-top">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-10">
+                    <div class="row d-flex justify-content-md-start justify-content-center">
+                        <?php
+                            foreach ($calendar_arr as $key => $value) {
+                        ?>
+                        <div class="col-md-4 px-0">
+                            <a  href="<?php esc_url(the_permalink($value['id'])); ?>">
+                                <div class="theme-slider__slide__wrapper"> <!-- slide item -->
+                                    <div class="theme-slider__slide__wrapper__head">
+                                        <img src=<?php echo $value['image'] ;?>>
+                                      
+                                    </div>
+                                    <div class="theme-slider__slide__wrapper__description">
+
+                                        <div class="">
+                                            <div class="theme-slider__slide__wrapper__head bg-white" style='height: 50px'>
+                                                <div class="theme-slider__slide__items text-dark pl-0">
+                                                    <div class="theme-slider__slide__items__icon">
+                                                        <img alt='' src='https://secure.gravatar.com/avatar/ebe4d299984d515ee832ac64cb16396d?s=96&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/ebe4d299984d515ee832ac64cb16396d?s=192&#038;d=mm&#038;r=g 2x' class='avatar avatar-96 photo' height='96' width='96' loading='lazy'/></div><div class="theme-slider__slide__items__item"><strong class="text-dark">WorkPlace Academy</strong></div>
+                                                    <div class="theme-slider__slide__items__icon">
+                                                        <i class="fas fa-euro-sign"></i></div>
+                                                        <div class="theme-slider__slide__items__item text-dark">
+                                                        <strong class="text-dark">
+                                                            <?php echo $value['price']; ?></strong></div>
+                                                    <!-- <div class="theme-slider__slide__items__icon"><i class="far fa-calendar-alt"></i></div><div class="theme-slider__slide__items__item"><strong>26 May</strong></div> -->
+                                                
+                                                    <div class="theme-slider__slide__items__icon">
+                                                        <i class="far fa-calendar-alt"></i>
+                                                    </div>
+                                                    <div class="theme-slider__slide__items__item text-dark m-0" style="width: 35%;">
+                                                        <strong>
+                                                                <?php
+                                                                    echo date("d", strtotime($value['start']))." ";
+                                                                    $dateObj   = DateTime::createFromFormat('!m', date("m", strtotime($value['start'])));
+                                                                    $monthName = $dateObj->format('F'); 
+                                                                    echo $monthName;
+                                                                ?>
+                                                        </strong>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+
+                                        <h4><?php echo $value['post_title']; ?></h4>
+                                        <?php echo get_the_excerpt($value['id']);?>                       
+                                        <div class="theme-slider__caret"><i class="fa fa-caret-right"></i></div>                        <div class="theme-slider__caret"><i class="fa fa-caret-right"></i></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <?php 
+                            }
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -------------------------------------------- dynamic course workshop --------------------------------------- -->
 
 
 <div class="theme-section">
@@ -93,7 +155,6 @@
                             <div class="nf-loading-spinner"></div>
 
                         </div>
-                        <!-- TODO: Move to Template File. -->
                         <script>var formDisplay=1;var nfForms=nfForms||[];var form=[];form.id='2';form.settings={"objectType":"Form Setting","editActive":true,"title":"Nieuwsbrief aanmelding","show_title":0,"allow_public_link":0,"embed_form":"","clear_complete":1,"hide_complete":1,"default_label_pos":"hidden","wrapper_class":"form-subscribe","element_class":"","key":"","add_submit":0,"changeEmailErrorMsg":"Voer een geldig e-mailadres in!","changeDateErrorMsg":"Vul een geldige datum in!","confirmFieldErrorMsg":"Deze velden moeten overeenkomen","fieldNumberNumMinError":"Fout met minimumaantal","fieldNumberNumMaxError":"Fout met maximumaantal","fieldNumberIncrementBy":"Toenemen met ","formErrorsCorrectErrors":"Corrigeer de fouten voordat je dit formulier indient.","validateRequiredField":"Dit is een verplicht veld.","honeypotHoneypotError":"Honeypot-fout","fieldsMarkedRequired":"Velden die gemarkeerd zijn met een <span class=\"ninja-forms-req-symbol\">*<\/span> zijn verplichte velden.","currency":"","repeatable_fieldsets":"","unique_field_error":"A form with this value has already been submitted.","logged_in":false,"not_logged_in_msg":"","sub_limit_msg":"The form has reached its submission limit.","calculations":[],"formContentData":["jouw_e-mailadres_1614628437304","aanmelden_1613415466567"],"drawerDisabled":false,"ninjaForms":"Ninja Forms","fieldTextareaRTEInsertLink":"Koppeling invoegen","fieldTextareaRTEInsertMedia":"Media invoegen","fieldTextareaRTESelectAFile":"Selecteer een bestand","formHoneypot":"Als je een persoon bent die dit veld ziet, laat je het leeg.","fileUploadOldCodeFileUploadInProgress":"Bestand wordt ge\u00fcpload.","fileUploadOldCodeFileUpload":"BESTANDSUPLOAD","currencySymbol":"&#36;","thousands_sep":".","decimal_point":",","siteLocale":"nl_NL","dateFormat":"m\/d\/Y","startOfWeek":"1","of":"van","previousMonth":"Vorige maand","nextMonth":"Volgende maand","months":["Januari","Februari","Maart","April","Mei","Juni","Juli","Augustus","September","Oktober","November","December"],"monthsShort":["Jan","Feb","Mrt","Apr","Mei","Jun","Jul","Aug","Sep","Okt","Nov","Dec"],"weekdays":["Zondag","Maandag","Dinsdag","Woensdag","Donderdag","Vrijdag","Zaterdag"],"weekdaysShort":["Zon","Maa","Din","Woe","Don","Vri","Zat"],"weekdaysMin":["Zo","Ma","Di","Wo","Do","Vr","Za"],"currency_symbol":"","beforeForm":"","beforeFields":"","afterFields":"","afterForm":""};form.fields=[{"objectType":"Field","objectDomain":"fields","editActive":false,"order":1,"idAttribute":"id","type":"email","label":"Jouw e-mailadres","key":"jouw_e-mailadres_1614628437304","label_pos":"hidden","required":1,"default":"","placeholder":"Jouw e-mailadres","container_class":"","element_class":"","admin_label":"","help_text":"","custom_name_attribute":"email","personally_identifiable":1,"value":"","drawerDisabled":false,"id":5,"beforeField":"","afterField":"","parentType":"email","element_templates":["email","input"],"old_classname":"","wrap_template":"wrap"},{"objectType":"Field","objectDomain":"fields","editActive":false,"order":2,"idAttribute":"id","label":"Aanmelden","type":"submit","processing_label":"Verwerken...","container_class":"","element_class":"","key":"aanmelden_1613415466567","drawerDisabled":false,"id":6,"beforeField":"","afterField":"","value":"","label_pos":"hidden","parentType":"textbox","element_templates":["submit","button","input"],"old_classname":"","wrap_template":"wrap-no-label"}];nfForms.push(form);</script>
                     </div>
                 </div>

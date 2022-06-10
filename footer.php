@@ -1,3 +1,9 @@
+<style>
+    .form-subscribe .nf-form-content nf-fields-wrap .nf-field .nf-field-element input[type="email"] {
+    opacity: 0;
+    background:red;
+}
+</style>
 <footer id="footer" class="bg__grey">
     <div class="container-fluid">
         <div class="row">
