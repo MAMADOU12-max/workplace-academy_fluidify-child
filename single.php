@@ -5,18 +5,40 @@ global $post;
 
 $posttags = get_the_tags();
 
- //Image
- $image = get_the_post_thumbnail_url($post->ID);
- if(!$image)
-     $image = get_stylesheet_directory_uri() . 'img/blog/2.jpg';
- 
- $author = get_field('profile_img',  'user_' . $post->post_author);
- if(!$author)
-     $author = get_stylesheet_directory_uri() . 'img/blog/blog-author.jpg';
+$stackoverflow = get_field('stackoverflow',  'user_' . $post->post_author);
+$github = get_field('github',  'user_' . $post->post_author);
+$facebook = get_field('facebook',  'user_' . $post->post_author);
+$twitter = get_field('twitter',  'user_' . $post->post_author);
+$linkedin = get_field('linkedin',  'user_' . $post->post_author);
+$instagram = get_field('instagram',  'user_' . $post->post_author);
+$discord = get_field('discord',  'user_' . $post->post_author);
+$tik_tok = get_field('tik_tok',  'user_' . $post->post_author);
 
- $biographical = get_field('biographical_info',  'user_' . $post->post_author);
+//Image
+$image = get_the_post_thumbnail_url($post->ID);
+if(!$image)
+    $image = get_field('preview', $post->ID)['url'];
+else if(!$image)
+    $image = get_stylesheet_directory_uri() . '/img/libay.png';
 
- $functie = get_field('role',  'user_' . $post->post_author);
+$author = get_field('profile_img',  'user_' . $post->post_author);
+if(!$author)
+    $author = get_stylesheet_directory_uri() . 'img/blog/blog-author.jpg';
+
+$biographical = get_field('biographical_info',  'user_' . $post->post_author);
+
+$functie = get_field('role',  'user_' . $post->post_author);
+
+if($tag = ''){
+    $tagS = intval(explode(',', get_field('categories',  $blog->ID)[0]['value'])[0]);
+    $tagI = intval(get_field('category_xml',  $blog->ID)[0]['value']);
+    if($tagS != 0)
+        $tag = (String)get_the_category_by_ID($tagS);
+    else if($tagI != 0)
+        $tag = (String)get_the_category_by_ID($tagI);                                    
+}
+
+$content = get_field('article_itself',  $blog->ID);
 
 ?>
 
@@ -29,36 +51,114 @@ $posttags = get_the_tags();
                     <div class="row">
                         <div class="col-lg-12 mb-5">
                             <div class="single-blog-item">
-                                <img src="<?php echo $image; ?>" alt="" class="img-fluid rounded">
+                                <img src="<?php echo$image; ?>" alt="" class="img-fluid rounded">
 
                                 <div class="blog-item-content bg-white blogPadding">
-                                    <div class="blog-item-meta bg-gray py-1 px-2">
-                                        <span class="text-muted text-capitalize mr-3"><i class="ti-pencil-alt mr-2"></i><?php echo $posttags[0]->name; ?></span>
-                                        <span class="text-muted text-capitalize mr-3"><i class="ti-comment mr-2"></i>0 Comments</span>
-                                        <span class="text-black text-capitalize mr-3"><i class="ti-time mr-1"></i> <?php echo get_the_date('d F'); ?></span>
-                                    </div> 
 
-                                    <h2 class="mt-3 mb-4"><?php echo the_title();?></h2>
-                                    <?php the_content();?>
+                                    <div class="headElementBlog">
+                                        <p><?php echo $posttags[0]->name; ?> </p>
+                                        <p><i class="ti-time mr-1"></i> <?php echo get_the_date('d F'); ?></p>
+                                    </div>
+                                    <div class="tabbable-panel">
+                                        <div class="tabbable-line">
+                                            <ul class="nav nav-tabs ">
+                                                <li class="active">
+                                                    <a href="#tab_default_1" data-toggle="tab">
+                                                        Details</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#tab_default_2" data-toggle="tab">
+                                                        <i class="ti-comment mr-2"></i>0 Comments
+                                                </li>
+                                                <li>
+                                                    <a href="#tab_default_3" data-toggle="tab">
+                                                     Add Comments
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content">
+                                                <div class="tab-pane active" id="tab_default_1">
+                                                    <h2 class="mt-3 mb-4"><?php echo the_title();?></h2>
+                                                    <?php
+                                                    if(!the_content())
+                                                        echo $content;
+                                                    ?>
 
-                                    <div class="tag-option mt-5 clearfix">
-                                        <ul class="float-left list-inline"> 
-                                            <li>Tags:</li> 
-                                            <?php foreach($posttags as $posttag) { ?>
-                                                <li class="list-inline-item"><a href="#" rel="tag"><?php echo $posttag->name; ?></a></li>
-                                            <?php } ?>
-                                        </ul>        
+                                                    <div class="tag-option mt-5 clearfix">
+                                                        <ul class="float-left list-inline">
+                                                            <li>Tags:</li>
+                                                            <?php
+                                                            if(!empty($posttags))
+                                                                foreach($posttags as $posttag)
+                                                                    echo '<li class="list-inline-item"><a href="#" rel="tag">' . $posttag->name . '</a></li>';
+                                                            else
+                                                                echo '<li class="list-inline-item"><a href="#" rel="tag">' . $tag . '</a></li>';
+                                                            ?>
+                                                        </ul>
 
-                                        <ul class="float-right list-inline">
-                                            <li class="list-inline-item"> Share: </li>
-                                            <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-                                            <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                                            <li class="list-inline-item">
-                                                <a href="#"><i class="fab fa-linkedin-in text-muted"></i></a>
-                                            </li>
-                                            <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
-                                            <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
-                                        </ul>
+                                                        <ul class="float-right list-inline">
+                                                            <li class="list-inline-item"> Share: </li>
+                                                            <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                                                            <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                                                            <li class="list-inline-item">
+                                                                <a href="#"><i class="fab fa-linkedin-in text-muted"></i></a>
+                                                            </li>
+                                                            <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                                            <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane" id="tab_default_2">
+                                                    <div class="sousBlockComments">
+                                                        <div class="d-flex">
+                                                            <div class="auteurImgComment">
+                                                                <img src="<?php echo get_stylesheet_directory_uri();?>/img/dan.jpg" alt="">
+                                                            </div>
+                                                            <div>
+                                                                <p class="NameAutorComment">Alakham Diouf</p>
+                                                                <p class="date">20 Dec</p>
+                                                            </div>
+                                                        </div>
+                                                        <p class="comment">Loren ipsum This paragraph is dedicated to expressing my skills what I have been able to acquire during my professional experience.
+                                                            Outside of let'say all the information that could be deemed relevant to a allow me to be known through my cursus.</p>
+                                                        <button class="replyBtn btn">Reply</button>
+                                                        <form class="replayForm">
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlTextarea1">Comment</label>
+                                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                            </div>
+                                                            <div class="buttonSend">
+                                                                <button class="btn btnSendComment sendReplay">Send</button>
+                                                            </div>
+                                                        </form>
+                                                        <div class="otherReplay">
+                                                            <div class="d-flex">
+                                                                <div class="auteurImgComment">
+                                                                    <img src="<?php echo get_stylesheet_directory_uri();?>/img/dan.jpg" alt="">
+                                                                </div>
+                                                                <div>
+                                                                    <p class="NameAutorComment">Daniel</p>
+                                                                    <p class="date">20 Dec</p>
+                                                                </div>
+                                                            </div>
+                                                            <p class="comment">Loren ipsum This paragraph is dedicated to expressing my skills what I have been able to acquire during my professional experience.
+                                                                Outside of let'say all the information that could be deemed relevant to a allow me to be known through my cursus.</p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="tab-pane" id="tab_default_3">
+                                                    <form>
+                                                        <div class="form-group">
+                                                            <label for="exampleFormControlTextarea1">Comment</label>
+                                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                        </div>
+                                                       <div class="buttonSend">
+                                                           <button class="btn btnSendComment">Send</button>
+                                                       </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -173,27 +273,27 @@ $posttags = get_the_tags();
                 <div class="col-lg-4">
                     <div class="sidebar-wrap">
                         <div class="sidebar-widget card border-0 mb-3">
-                            <img src="<?php echo $author; ?>" alt="" class="img-fluid">
+                            <a href="<? "/user-overview/?id=" . $post->post_author; ?>" target="_blank" rel="noopener noreferrer"><img src="<?php echo $author; ?>" alt="" class="img-fluid"></a>
                             <div class="card-body p-4 text-center">
-                                <h5 class="mb-0 mt-4"><?php echo(get_userdata($post->post_author)->data->display_name); ?></h5>
+                                <a href="<? "/user-overview/?id=" . $post->post_author; ?>" target="_blank" rel="noopener noreferrer"><h5 class="mb-0 mt-4"><?php echo(get_userdata($post->post_author)->data->display_name); ?></h5></a>
                                 <p><?php echo $functie; ?></p>
                                 <p><?php echo $biographical; ?></p>
 
                                 <ul class="list-inline author-socials">
                                     <li class="list-inline-item mr-3">
-                                        <a href="#"><i class="fab fa-facebook-f text-muted"></i></a>
+                                        <a href="<?= $facebook; ?>"><i class="fab fa-facebook-f text-muted"></i></a>
                                     </li>
                                     <li class="list-inline-item mr-3">
-                                        <a href="#"><i class="fab fa-twitter text-muted"></i></a>
+                                        <a href="<?= $twitter; ?>"><i class="fab fa-twitter text-muted"></i></a>
                                     </li>
                                     <li class="list-inline-item mr-3">
-                                        <a href="#"><i class="fab fa-linkedin-in text-muted"></i></a>
+                                        <a href="<?= $linkedin; ?>"><i class="fab fa-linkedin-in text-muted"></i></a>
                                     </li>
                                     <li class="list-inline-item mr-3">
-                                        <a href="#"><i class="fab fa-pinterest text-muted"></i></a>
+                                        <a href="<?= $github; ?>"><i class="fab fa-github text-muted"></i></a>
                                     </li>
                                     <li class="list-inline-item mr-3">
-                                        <a href="#"><i class="fab fa-behance text-muted"></i></a>
+                                        <a href="<?= $discord; ?>"><i class="fab fa-discord text-muted"></i></a>
                                     </li>
                                 </ul>
                             </div>
@@ -209,11 +309,12 @@ $posttags = get_the_tags();
                             ?>
                             
                             <div class="media border-bottom py-3">
-                                <a href="<?php echo get_the_permalink($latest['ID']);?>"><img class="mr-4" src="img/blog/bt-3.jpg" alt=""></a>
-                                <div class="media-body">
-                                    <h6 class="my-2"><a href="#"><?php echo get_the_title($latest['ID']);?></a></h6>
-                                    <span class="text-sm text-muted"><?php echo get_the_date('d-m-Y',$latest['ID']);?></span>
-                                </div>
+                                <a href="<?php echo get_the_permalink($latest['ID']);?>"><img class="mr-4" src="<?= get_stylesheet_directory_uri(); ?>/img/blog/bt-3.jpg" alt="">
+                                    <div class="media-body">
+                                        <h6 class="my-2"><?php echo get_the_title($latest['ID']);?></h6>
+                                        <span class="text-sm text-muted"><?php echo get_the_date('d-m-Y',$latest['ID']);?></span>
+                                    </div>
+                                </a>
                             </div>
                             <?php }?>
                         </div>
@@ -237,5 +338,6 @@ $posttags = get_the_tags();
 
 </div>
 
-
 <?php get_footer();?>
+<?php wp_footer(); ?>
+
